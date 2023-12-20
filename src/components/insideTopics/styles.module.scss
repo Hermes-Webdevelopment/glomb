@@ -1,0 +1,339 @@
+@import '/src/styles/variables.scss';
+
+.insideContainer {
+    flex-direction: column;
+    position: relative;
+    overflow: unset;
+}
+
+.textBoxContainerClean {
+    a {
+        margin-top: 32px;
+    }
+}
+
+.circleEffect_3 {
+    position: absolute;
+    left: 35%;
+    top: 38%;
+    width: 120%;
+    height: 250%;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: #F9F9F9;
+}
+
+.circleEffect_2 {
+    position: absolute;
+    left: 47%;
+    top: 38%;
+    width: 63%;
+    height: 154%;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: #F9F9F9;
+    min-width: 1000px;
+}
+
+.removeMarginBotton {
+    margin-bottom: 0 !important;
+}
+
+ul {
+    &.divideSection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+
+        li {
+            width: 45%;
+        }
+
+        li:last-child{
+            .removeMarginBotton {
+                margin-bottom: 0px !important;
+            }
+        }
+    }
+
+    li {
+        .removeMarginBotton {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    li:last-child{
+        .removeMarginBotton {
+            margin-bottom: 32px !important;
+        }
+    }
+}
+
+.insideTopicsMainBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 102px 20px 30px;
+
+    >div {
+        gap: 20px;
+
+        h2 {
+            font-size: $typography-title-dstitle-xxl-semi-bold-font-size;
+            text-decoration: $typography-title-dstitle-xxl-semi-bold-text-decoration;
+            font-family: $typography-title-dstitle-xxl-semi-bold-font-family;
+            font-weight: $typography-title-dstitle-xxl-semi-bold-font-weight;
+            font-style: $typography-title-dstitle-xxl-semi-bold-font-style;
+            font-stretch: $typography-title-dstitle-xxl-semi-bold-font-stretch;
+            letter-spacing: $typography-title-dstitle-xxl-semi-bold-letter-spacing;
+            line-height: $typography-title-dstitle-xxl-semi-bold-line-height;
+            margin-bottom: 24px;
+        }
+
+        p {
+            font-size: $typography-paragraph-dstext-md-font-size;
+            text-decoration: $typography-paragraph-dstext-md-text-decoration;
+            font-family: $typography-paragraph-dstext-md-font-family;
+            font-weight: $typography-paragraph-dstext-md-font-weight;
+            font-style: $typography-paragraph-dstext-md-font-style;
+            font-stretch: $typography-paragraph-dstext-md-font-stretch;
+            letter-spacing: $typography-paragraph-dstext-md-letter-spacing;
+            line-height: $typography-paragraph-dstext-md-line-height;
+            margin-bottom: 24px;
+        }
+
+        li {
+            margin-left: 17px;
+        }
+
+        a {
+            width: 100%;
+        }
+
+        .grayBox {
+            background-color: #F2F6FA;
+            width: 100%;
+            padding: 19px 15px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+
+            p {
+                margin: 0;
+                text-align: center;
+                color: #6D6E76;
+            }
+        }
+    }
+
+    .imageContainer {
+        position: relative;
+        height: 500px;
+        margin-right: 110px;
+
+        &.imageContainerClean {
+            img {
+                width: 323px;
+            }
+        }
+
+        img {
+            object-fit: contain;
+            height: 500px;
+            border-radius: 32px;
+        }
+    }
+
+    &.invertImagePosition {
+        flex-direction: row-reverse;
+
+        .imageContainer {
+            position: relative;
+            height: 500px;
+            margin-right: 0px;
+            margin-left: 110px;
+        }
+    }
+}
+
+.cleanModeExtraText {
+    max-width: 700px;
+        p {
+            font-size: $typography-emphasis-dsemphasis-lg-font-size;
+            text-decoration: $typography-emphasis-dsemphasis-lg-text-decoration;
+            font-family: $typography-emphasis-dsemphasis-lg-font-family;
+            font-weight: $typography-emphasis-dsemphasis-lg-font-weight;
+            font-style: $typography-emphasis-dsemphasis-lg-font-style;
+            font-stretch: $typography-emphasis-dsemphasis-lg-font-stretch;
+            letter-spacing: $typography-emphasis-dsemphasis-lg-letter-spacing;
+            line-height: $typography-emphasis-dsemphasis-lg-line-height;
+            text-align: center;
+        }
+}
+
+@media (max-width: 992px) {
+    .circleEffect_3 {
+        background-color: unset;
+    }
+    .circleEffect_2 {
+        background-color: unset;
+    }
+    .circleEffect_1 {
+        background-color: unset;
+    }
+
+    .insideTopicsMainBox {
+        flex-direction: column;
+        padding: 40px 24px 8px;
+        width: 100%;
+        
+        .imageContainer {
+            margin-bottom: 24px;
+            width: 100%;
+            height: auto;
+            margin-right: 0px;
+
+            &.imageContainerClean {
+                img {
+                    width: 100%;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        >div, .textBoxContainer{
+
+            &.imageContainerClean {
+                width: 100%;
+            }
+
+            &.textBoxContainerClean {
+                width: 100%;
+            }
+
+            &.textBoxContainerClean ul {
+                padding-bottom:0px;
+            }
+
+            width: 100%;
+
+            ul{
+                padding-bottom:16px;
+            }
+
+            >div {
+                margin-bottom: 32px;
+            }
+        }
+
+        &.invertImagePosition {
+            flex-direction: column;
+    
+            .imageContainer {
+                height: auto;
+                margin-left: 0px;
+            }
+        }
+    }
+
+    
+
+    .textBoxContainerClean {
+        a {
+            margin-top: 0px;
+        }
+    }
+
+    .cleanModeExtraText {
+        padding: 0 20px;
+            p {
+                font-size: 20px;
+                line-height: 28px;
+            }
+    }
+}
+
+@media (max-width: 768px) {
+    ul {
+        &.divideSection {
+    
+            li {
+                width: 100%;
+            }
+    
+            li:last-child{
+                .removeMarginBotton {
+                    margin-bottom: 32px !important;
+                }
+            }
+        }
+    }
+
+    .insideTopicsMainBox {
+        >div {
+            h2 {
+                font-size: $typography-title-dstitle-xl-font-size;
+                text-decoration: $typography-title-dstitle-xl-text-decoration;
+                font-family: $typography-title-dstitle-xl-font-family;
+                font-weight: $typography-title-dstitle-xl-font-weight;
+                font-style: $typography-title-dstitle-xl-font-style;
+                font-stretch: $typography-title-dstitle-xl-font-stretch;
+                letter-spacing: $typography-title-dstitle-xl-letter-spacing;
+                line-height: $typography-title-dstitle-xl-line-height;
+                margin-bottom: 16px;
+            }
+    
+            p {
+                font-size: $typography-paragraph-dstext-sm-font-size;
+                text-decoration: $typography-paragraph-dstext-sm-text-decoration;
+                font-family: $typography-paragraph-dstext-sm-font-family;
+                font-weight: $typography-paragraph-dstext-sm-font-weight;
+                font-style: $typography-paragraph-dstext-sm-font-style;
+                font-stretch: $typography-paragraph-dstext-sm-font-stretch;
+                letter-spacing: $typography-paragraph-dstext-sm-letter-spacing;
+                line-height: $typography-paragraph-dstext-sm-line-height;
+                margin-bottom: 32px;
+            }
+        }
+    }
+
+    .cleanModeExtraText {
+        max-width: 100%;
+        padding: 0 38px;
+            p {
+                font-size: $typography-emphasis-dsemphasis-sm-font-size;
+                text-decoration: $typography-emphasis-dsemphasis-sm-text-decoration;
+                font-family: $typography-emphasis-dsemphasis-sm-font-family;
+                font-weight: $typography-emphasis-dsemphasis-sm-font-weight;
+                font-style: $typography-emphasis-dsemphasis-sm-font-style;
+                font-stretch: $typography-emphasis-dsemphasis-sm-font-stretch;
+                letter-spacing: $typography-emphasis-dsemphasis-sm-letter-spacing;
+                line-height: $typography-emphasis-dsemphasis-sm-line-height;
+                text-align: center;
+            }
+    }
+}
+
+@media (max-width: 351px) {
+    .insideTopicsMainBox {
+        >div {
+            
+            h2 {
+                font-size: 26px;
+                margin-bottom: 16px;
+            }
+
+            p {
+                margin-bottom: 14px;
+                font-size: 18px;
+            }
+        }
+    }
+}

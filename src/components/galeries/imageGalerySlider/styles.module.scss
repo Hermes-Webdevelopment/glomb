@@ -1,0 +1,261 @@
+@import '/src/styles/variables.scss';
+
+.sliderButtons {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: -12%;
+    right: 40px;
+    gap: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button{
+        background-color: transparent;
+    }
+}
+
+.sliderContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+
+    h2 {
+        font-size: $typography-display-dsdisplay-sm-bold-font-size;
+        text-decoration: $typography-display-dsdisplay-sm-bold-text-decoration;
+        font-family: $typography-display-dsdisplay-sm-bold-font-family;
+        font-weight: $typography-display-dsdisplay-sm-bold-font-weight;
+        font-style: $typography-display-dsdisplay-sm-bold-font-style;
+        font-stretch: $typography-display-dsdisplay-sm-bold-font-stretch;
+        letter-spacing: $typography-display-dsdisplay-sm-bold-letter-spacing;
+        line-height: $typography-display-dsdisplay-sm-bold-line-height;
+        max-width: 70%;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .subText {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 104px;
+        h3 {
+            color: $color-brand-brandingprimary;
+            font-size: $typography-title-dstitle-xl-font-size;
+            text-decoration: $typography-title-dstitle-xl-text-decoration;
+            font-family: $typography-title-dstitle-xl-font-family;
+            font-weight: $typography-title-dstitle-xl-font-weight;
+            font-style: $typography-title-dstitle-xl-font-style;
+            font-stretch: $typography-title-dstitle-xl-font-stretch;
+            letter-spacing: $typography-title-dstitle-xl-letter-spacing;
+            line-height: $typography-title-dstitle-xl-line-height;
+        }
+    }
+
+    :global(.swiper) {
+        overflow: unset;
+    }
+
+    :global(.swiper-wrapper) {
+        width: calc(100% + 60px);
+    }
+
+    :global(.swiper-slide)  { 
+        width: calc(15%) !important;
+        height: 503px;
+        background-color: unset;
+        -webkit-transition: width 1s ease-in-out;
+        -moz-transition: width 1s ease-in-out;
+        -o-transition: width 1s ease-in-out;
+        transition: width 1s ease-in-out;
+    }
+
+    :global(.swiper-slide-active)  { 
+        width: calc(50%) !important;
+        height: 503px;
+        -webkit-transition: width 1s ease-in-out;
+        -moz-transition: width 1s ease-in-out;
+        -o-transition: width 1s ease-in-out;
+        transition: width 1s ease-in-out;
+    
+    }
+
+    .nextOrPrevSlider {
+        height: 503px !important;
+
+        img {
+            object-fit: cover;
+            border-radius: 24px;
+        }
+    }
+}
+
+.imageGalerySliderSection {
+    background-color: $light-gray-red;
+    padding: 48px 0;
+}
+
+.addMarginOnClean {
+    margin-top: 80px;
+}
+
+@media (max-width: 1500px) {
+    .sliderContainer {
+        :global(.swiper-slide-active)  { 
+            width: calc(40%) !important;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .sliderContainer {
+        :global(.swiper-wrapper) {
+            width: calc(100% + 15px);
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .sliderContainer {
+        :global(.swiper-wrapper) {
+            width: calc(100% - 23px);
+        }
+    }
+    
+
+    .addMarginOnClean {
+        margin-top: 0px;
+    }
+
+    .imageGalerySliderSection {
+        padding: 32px 0;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .peopleComentsSection {
+        padding-bottom: 40px;
+    }
+
+    .swiperContainerMobile {
+        position: relative;
+    }
+    
+    .sliderContainer {
+        width: 100vw;
+        max-width: unset;
+        padding: 0;
+
+        .subText {
+            flex-direction: column;
+            gap: 0px;
+            margin-bottom: 24px;
+
+            h3 {
+                font-size: $typography-title-dstitle-sm-font-size;
+                text-decoration: $typography-title-dstitle-sm-text-decoration;
+                font-family: $typography-title-dstitle-sm-font-family;
+                font-weight: $typography-title-dstitle-sm-font-weight;
+                font-style: $typography-title-dstitle-sm-font-style;
+                font-stretch: $typography-title-dstitle-sm-font-stretch;
+                letter-spacing: $typography-title-dstitle-sm-letter-spacing;
+                line-height: $typography-title-dstitle-sm-line-height;
+                max-width: 540px;
+            }
+        }
+
+        h2 {
+            max-width: 540px;
+            padding: 0 15px;
+            font-size: $typography-title-dstitle-lg-bold-font-size;
+            text-decoration: $typography-title-dstitle-lg-bold-text-decoration;
+            font-family: $typography-title-dstitle-lg-bold-font-family;
+            font-weight: $typography-title-dstitle-lg-bold-font-weight;
+            font-style: $typography-title-dstitle-lg-bold-font-style;
+            font-stretch: $typography-title-dstitle-lg-bold-font-stretch;
+            letter-spacing: $typography-title-dstitle-lg-bold-letter-spacing;
+            line-height: $typography-title-dstitle-lg-bold-line-height;
+        }
+
+        :global(.swiper) {
+            border-radius: 16px;
+        }
+
+        :global(.swiper-wrapper) {
+            width: 100%;
+        }
+    
+        :global(.swiper-slide)  { 
+            width: 100% !important;
+        }
+    
+        :global(.swiper-slide-active)  { 
+            width: 100% !important;
+        }
+
+        :global(.swiper-button-prev) {
+            color: white;
+        }
+
+        :global(.swiper-button-next) {
+            color: white;
+        }
+
+        :global(.swiper-pagination-bullet) {
+            width: 5px;
+            height: 5px;
+        }
+
+        :global(.swiper-pagination-bullet-active) {
+            width: 8px;
+            height: 8px;
+            background-color: white;
+        }
+
+        .nextOrPrevSlider {
+            height: 280px !important;
+
+            img {
+                border-radius: 0px;
+            }
+        }
+    }
+    .sliderButtons {
+        top: 77%;
+        z-index: 20;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+
+        svg {
+            max-height: 41px;
+        }
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .sliderContainer {
+
+        :global(.swiper-wrapper) {
+            width: 100%;
+            height: auto;
+        }
+
+        :global(.swiper-slide)  { 
+            width: 100% !important;
+            height: auto;
+        }
+    }
+   
+}

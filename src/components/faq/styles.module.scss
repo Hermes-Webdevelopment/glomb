@@ -1,0 +1,230 @@
+@import '/src/styles/variables.scss';
+
+.sectionFaq {
+    width: 100vw;
+    padding-bottom: 80px;
+
+    .containerFaq {
+        width: 100%;
+        padding: 0 254px;
+        
+        h3 {
+            width: 100%;
+            text-align: center;
+            font-size: $typography-title-dstitle-xxl-semi-bold-font-size;
+            text-decoration: $typography-title-dstitle-xxl-semi-bold-text-decoration;
+            font-family: $typography-title-dstitle-xxl-semi-bold-font-family;
+            font-weight: $typography-title-dstitle-xxl-semi-bold-font-weight;
+            font-style: $typography-title-dstitle-xxl-semi-bold-font-style;
+            font-stretch: $typography-title-dstitle-xxl-semi-bold-font-stretch;
+            letter-spacing: $typography-title-dstitle-xxl-semi-bold-letter-spacing;
+            line-height: $typography-title-dstitle-xxl-semi-bold-line-height;
+            padding: 120px 0 68px;
+        }
+
+        summary {
+            position: relative;
+            border-bottom: 1px solid $branding-tertiary;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            p {
+                font-size: $typography-title-dstitle-lg-font-size;
+                text-decoration: $typography-title-dstitle-lg-text-decoration;
+                font-family: $typography-title-dstitle-lg-font-family;
+                font-weight: $typography-title-dstitle-lg-font-weight;
+                font-style: $typography-title-dstitle-lg-font-style;
+                font-stretch: $typography-title-dstitle-lg-font-stretch;
+                letter-spacing: $typography-title-dstitle-lg-letter-spacing;
+                line-height: $typography-title-dstitle-lg-line-height;
+                color: $branding-secondary;
+                padding-right: 38px;
+            }
+        }
+
+        details:hover {
+            svg {
+                transform: scale(1.5);
+            }
+        }
+
+        details:last-child {
+            summary {
+                border-bottom: unset;
+            }
+        }
+
+        summary::marker {
+            content: none;
+        }
+
+        details > summary {
+            list-style: none;
+        }
+        
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before,
+        summary::after {
+            content: none;
+        }
+
+        [open] summary {
+            border-bottom: unset;
+            margin-bottom: 0px;
+        }
+
+        details {
+            div {
+                p {
+                    font-size: $typography-paragraph-dstext-md-semi-bold-font-size;
+                    text-decoration: $typography-paragraph-dstext-md-semi-bold-text-decoration;
+                    font-family: $typography-paragraph-dstext-md-semi-bold-font-family;
+                    font-weight: $typography-paragraph-dstext-md-semi-bold-font-weight;
+                    font-style: $typography-paragraph-dstext-md-semi-bold-font-style;
+                    font-stretch: $typography-paragraph-dstext-md-semi-bold-font-stretch;
+                    letter-spacing: $typography-paragraph-dstext-md-semi-bold-letter-spacing;
+                    line-height: $typography-paragraph-dstext-md-semi-bold-line-height;
+                    color: $color-brand-brandingsecondary;
+                }
+            }
+            svg {
+                min-width: 20px;
+                -webkit-transition: -webkit-transform .8s ease-in-out;
+                -ms-transition: -ms-transform .8s ease-in-out;
+                transition: transform .8s ease-in-out;  
+            }
+        }
+        
+        details[open] {
+            padding-bottom: 24px;
+            border-bottom: 1px solid $color-brand-brandingtertiary;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+
+            svg {
+                transform:rotate(180deg);
+                -ms-transform:rotate(180deg);
+                -webkit-transform:rotate(180deg);
+            }
+        } 
+        
+        details[open] {
+            border-bottom: unset;
+        }
+
+        @keyframes open {
+            0% { opacity: 0 }
+            100% { opacity: 1 }
+        }
+        
+        /* closing animation */
+        @keyframes close {
+            0% { opacity: 1 }
+            100% { opacity: 0}
+        }
+        
+        details[open] summary~* {
+            animation: open 1s;
+        }
+        
+        /* closing class */
+        details.closing summary~* {
+            animation: close 1s;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+
+    .sectionFaq {
+    
+        .containerFaq {
+            padding: 0 100px;
+
+            summary {
+                p {
+                    font-size: $typography-title-dstitle-sm-font-size;
+                    text-decoration: $typography-title-dstitle-sm-text-decoration;
+                    font-family: $typography-title-dstitle-sm-font-family;
+                    font-weight: $typography-title-dstitle-sm-font-weight;
+                    font-style: $typography-title-dstitle-sm-font-style;
+                    font-stretch: $typography-title-dstitle-sm-font-stretch;
+                    letter-spacing: $typography-title-dstitle-sm-letter-spacing;
+                    line-height: $typography-title-dstitle-sm-line-height;
+                }
+            }
+
+            details {
+                div {
+                    p {
+                        font-size: $typography-paragraph-dstext-sm-font-size;
+                        text-decoration: $typography-paragraph-dstext-sm-text-decoration;
+                        font-family: $typography-paragraph-dstext-sm-font-family;
+                        font-weight: $typography-paragraph-dstext-sm-font-weight;
+                        font-style: $typography-paragraph-dstext-sm-font-style;
+                        font-stretch: $typography-paragraph-dstext-sm-font-stretch;
+                        letter-spacing: $typography-paragraph-dstext-sm-letter-spacing;
+                        line-height: $typography-paragraph-dstext-sm-line-height;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 992px) {
+    
+}
+
+@media (max-width: 768px) {
+
+    .sectionFaq {
+    
+        .containerFaq {
+            padding: 0 27px;
+
+            h3 {
+                font-size: $typography-title-dstitle-lg-font-size;
+                text-decoration: $typography-title-dstitle-lg-text-decoration;
+                font-family: $typography-title-dstitle-lg-font-family;
+                font-weight: $typography-title-dstitle-lg-font-weight;
+                font-style: $typography-title-dstitle-lg-font-style;
+                font-stretch: $typography-title-dstitle-lg-font-stretch;
+                letter-spacing: $typography-title-dstitle-lg-letter-spacing;
+                line-height: $typography-title-dstitle-lg-line-height;
+                padding: 80px 0 32px;
+            }
+
+            details:hover {
+                svg {
+                    transform: scale(1);
+                }
+            }
+
+            details {
+                svg {
+                    transform: scale(1) rotate(0);
+                }
+            }
+
+            details[open] {
+                svg {
+                    transform: scale(1) rotate(180deg);
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 576px) {
+    
+}

@@ -1,0 +1,59 @@
+@import '/src/styles/variables.scss';
+
+.mapIframe {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.titleContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 32px;
+    margin-bottom: 24px;
+
+    h3 {
+        font: $montserrat-16;
+        color: $branding-dark-blue;
+        text-align: center;
+    }
+
+    h2{
+        font: $montserrat-32;
+        color: #4C4C4C;
+        margin-bottom: 16px;
+    }
+}
+
+@media (min-width: 576px) {
+    
+}
+
+@media (min-width: 768px) {
+
+
+    .titleContainer {
+        margin-top: 38px;
+        margin-bottom: 38px;
+    
+        h3 {
+            font: $montserrat-18;
+            text-align: center;
+        }
+    
+        h2{
+            font: $montserrat-36;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    
+}
+
+@media (min-width:1200px) {
+    
+}

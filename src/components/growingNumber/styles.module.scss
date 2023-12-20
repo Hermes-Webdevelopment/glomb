@@ -1,0 +1,114 @@
+@import '/src/styles/variables.scss';
+
+.sectionGrowingNumber {
+    background-color: $light-gray-red;
+    padding: 40px 0;
+
+    .title {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        span, p {
+            font: $montserrat-18;
+        }
+
+        span:first-of-type, h2 {
+            font: $montserrat-24-semi-bold;
+            color: $title-text-color;
+            margin-bottom: 16px;
+        }
+        
+    }
+
+    .numberAnimation {
+        width: auto;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        >div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:first-of-type {
+                margin-top: 24px;
+                margin-bottom: 8px;
+            }
+
+            span, p {
+                color: $color-brand-brandingprimary;
+                font: $montserrat-18;
+            }
+
+            span:first-of-type, h2 {
+                font: $montserrat-30;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 470px) {
+   
+}
+
+@media (min-width: 768px) {
+    .sectionGrowingNumber {
+        padding: 48px 80px;
+
+        .numberAnimation {
+            flex-direction: row;
+
+            >div {
+                margin-top: 28px !important;
+    
+                &:first-of-type {
+                    margin-bottom: unset;
+                    margin-right: 72px;
+                }
+
+                span, p {
+                    color: $color-brand-brandingprimary;
+                    font: $montserrat-24;
+                }
+    
+                span:first-of-type, h2 {
+                    font: $montserrat-40;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .title {
+    
+            span, p {
+                font: $montserrat-28;
+            }
+    
+            span:first-of-type, h2 {
+                font: $montserrat-36; 
+                margin-bottom: 0px;
+            }
+            
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .sectionGrowingNumber {
+        padding: 48px 132px;
+    }
+}
+
+@media (min-width:1200px) {
+    .sectionGrowingNumber {
+        padding: 48px 172px;
+    }
+    
+}

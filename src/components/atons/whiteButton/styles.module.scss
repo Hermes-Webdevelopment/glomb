@@ -1,0 +1,65 @@
+@import '/src/styles/variables.scss';
+
+.whiteButton{
+    &.forceChange {
+        .buttonContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 16px;
+    
+            u {
+                margin-right: 12px;
+            }
+    
+            p {
+                font-size: $typography-paragraph-dstext-sm-semi-bold-font-size;
+                text-decoration: $typography-paragraph-dstext-sm-semi-bold-text-decoration;
+                font-family: $typography-paragraph-dstext-sm-semi-bold-font-family;
+                font-weight: $typography-paragraph-dstext-sm-semi-bold-font-weight;
+                font-style: $typography-paragraph-dstext-sm-semi-bold-font-style;
+                font-stretch: $typography-paragraph-dstext-sm-semi-bold-font-stretch;
+                letter-spacing: $typography-paragraph-dstext-sm-semi-bold-letter-spacing;
+                line-height: $typography-paragraph-dstext-sm-semi-bold-line-height;
+                margin-bottom: 0;
+                width: 100%;
+    
+                &.changeToBlue {
+                    color: $color-brand-brandingprimary;
+                    width: 170px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .whiteButton {
+        .buttonContainer {
+    
+            u {
+                margin-right: unset;
+            }
+    
+            p {
+                margin-bottom: unset;
+                font-size: $typography-paragraph-dstext-md-semi-bold-font-size;
+                text-decoration: $typography-paragraph-dstext-md-semi-bold-text-decoration;
+                font-family: $typography-paragraph-dstext-md-semi-bold-font-family;
+                font-weight: $typography-paragraph-dstext-md-semi-bold-font-weight;
+                font-style: $typography-paragraph-dstext-md-semi-bold-font-style;
+                font-stretch: $typography-paragraph-dstext-md-semi-bold-font-stretch;
+                letter-spacing: $typography-paragraph-dstext-md-semi-bold-letter-spacing;
+                line-height: $typography-paragraph-dstext-md-semi-bold-line-height;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+
+    .btnClean {
+        max-width: unset;
+    }
+
+}

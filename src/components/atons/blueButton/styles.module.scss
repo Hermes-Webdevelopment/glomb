@@ -1,0 +1,149 @@
+@import '/src/styles/variables.scss';
+
+.btnClean, .btnTransparent, .mainMode {
+
+    &.forceChange{
+
+        .buttonContainer {
+            width: 95%;
+            padding: 10px 14px;
+            background-color: $color-brand-brandingprimary;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            transition: all 0.5s ease-out;
+            -webkit-animation: all 0.5s ease-out;
+            -moz-animation: all 0.5s ease-out;
+            -o-animation: all 0.5s ease-out;
+        
+            p {
+                font-size: $typography-paragraph-dstext-sm-font-size;
+                text-decoration: $typography-paragraph-dstext-sm-text-decoration;
+                font-family: $typography-paragraph-dstext-sm-font-family;
+                font-weight: $typography-paragraph-dstext-sm-font-weight;
+                font-style: $typography-paragraph-dstext-sm-font-style;
+                font-stretch: $typography-paragraph-dstext-sm-font-stretch;
+                letter-spacing: $typography-paragraph-dstext-sm-letter-spacing;
+                line-height: $typography-paragraph-dstext-sm-line-height;
+                opacity: 1;
+                margin-bottom: 0;
+                color: white;
+                text-align: center;
+
+                strong {
+                    font-size: 18px;
+                }
+            }
+    
+            &:hover {
+                background-color: $branding-primary-hover;
+            }
+        }
+    }
+}
+
+.btnClean, .btnTransparent {
+
+    .buttonContainer {
+        p{
+            width: 50%;
+        }
+    }
+}
+
+.floatingButton {
+
+    .buttonContainer {
+        p{
+            width: 190px;
+        }
+    }
+}
+
+.changeOpacity {
+    opacity: 0;
+
+    -webkit-animation: opacity 0.5s ease-out;
+    -moz-animation: opacity 0.5s ease-out;
+    -o-animation: opacity 0.5s ease-out;
+    transition: opacity 0.5s ease-out;
+}
+
+.btnTransparent {
+    width: 100%;
+    max-width: 400px;
+
+    .buttonContainer {
+        background-color: transparent;
+        border: 2px solid $color-brand-brandingprimary;
+        border-radius: 8px;
+        margin-top: 48px;
+
+        p {
+            color: $color-brand-brandingprimary;
+        }
+
+        &:hover {
+            background-color: $branding-quartiary;
+        }
+    }
+}
+
+.floatingButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    z-index: 999;
+    width: 100vw;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container {
+    max-width: 100%;
+}
+
+@media (min-width: 576px) {
+    .buttonContainer {
+        width: 100%;
+        font-size: $typography-paragraph-dstext-sm-semi-bold-font-size;
+        text-decoration: $typography-paragraph-dstext-sm-semi-bold-text-decoration;
+        font-family: $typography-paragraph-dstext-sm-semi-bold-font-family;
+        font-weight: $typography-paragraph-dstext-sm-semi-bold-font-weight;
+        font-style: $typography-paragraph-dstext-sm-semi-bold-font-style;
+        font-stretch: $typography-paragraph-dstext-sm-semi-bold-font-stretch;
+        letter-spacing: $typography-paragraph-dstext-sm-semi-bold-letter-spacing;
+        line-height: $typography-paragraph-dstext-sm-semi-bold-line-height;
+        
+    }
+}
+
+@media (min-width: 768px) {
+    .btnClean {
+        max-width: unset;
+    }
+}
+
+@media (min-width: 992px) {
+    .buttonContainer {
+        width: 90%;
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    .btnClean {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .buttonContainer {
+        width: 95%;
+        padding: 14px;
+        font-size: $typography-paragraph-dstext-md-semi-bold-font-size;
+    }
+}

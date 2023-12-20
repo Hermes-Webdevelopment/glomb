@@ -1,0 +1,87 @@
+@import '/src/styles/variables.scss';
+
+.linkContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    filter: drop-shadow(0 0 0.3rem rgba(0,0,0,0.25));
+    overflow: hidden;
+    margin-top: 32px;
+
+    .imageContainer {
+        max-width: 163px;
+        max-height: 86px;
+
+        img{
+            object-fit: contain;
+        }
+    }
+
+    .textContainer {
+        width: 100%;
+        height: auto;
+        padding-left: 32px;
+    
+        h3 {
+            font-size: $typography-paragraph-dstext-sm-semi-bold-font-size;
+            text-decoration: $typography-paragraph-dstext-sm-semi-bold-text-decoration;
+            font-family: $typography-paragraph-dstext-sm-semi-bold-font-family;
+            font-weight: $typography-paragraph-dstext-sm-semi-bold-font-weight;
+            font-style: $typography-paragraph-dstext-sm-semi-bold-font-style;
+            font-stretch: $typography-paragraph-dstext-sm-semi-bold-font-stretch;
+            letter-spacing: $typography-paragraph-dstext-sm-semi-bold-letter-spacing;
+            line-height: $typography-paragraph-dstext-sm-semi-bold-line-height;
+        }
+
+        p {
+            font-size: $typography-paragraph-dstext-xxs-font-size;
+            text-decoration: $typography-paragraph-dstext-xxs-text-decoration;
+            font-family: $typography-paragraph-dstext-xxs-font-family;
+            font-weight: $typography-paragraph-dstext-xxs-font-weight;
+            font-style: $typography-paragraph-dstext-xxs-font-style;
+            font-stretch: $typography-paragraph-dstext-xxs-font-stretch;
+            letter-spacing: $typography-paragraph-dstext-xxs-letter-spacing;
+            line-height: $typography-paragraph-dstext-xxs-line-height;
+            color: $color-brand-brandingprimary;
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .linkContainer {
+    margin-top: 40px;
+    
+        .imageContainer {
+            max-height: 118px;
+        }
+    
+        .textContainer {
+
+            h3 {
+                font-size: $typography-paragraph-dstext-xl-semi-bold-font-size;
+                text-decoration: $typography-paragraph-dstext-xl-semi-bold-text-decoration;
+                font-family: $typography-paragraph-dstext-xl-semi-bold-font-family;
+                font-weight: $typography-paragraph-dstext-xl-semi-bold-font-weight;
+                font-style: $typography-paragraph-dstext-xl-semi-bold-font-style;
+                font-stretch: $typography-paragraph-dstext-xl-semi-bold-font-stretch;
+                letter-spacing: $typography-paragraph-dstext-xl-semi-bold-letter-spacing;
+                line-height: $typography-paragraph-dstext-xl-semi-bold-line-height;
+            }
+    
+            p {
+                font-size: $typography-paragraph-dstext-sm-font-size;
+                text-decoration: $typography-paragraph-dstext-sm-text-decoration;
+                font-family: $typography-paragraph-dstext-sm-font-family;
+                font-weight: $typography-paragraph-dstext-sm-font-weight;
+                font-style: $typography-paragraph-dstext-sm-font-style;
+                font-stretch: $typography-paragraph-dstext-sm-font-stretch;
+                letter-spacing: $typography-paragraph-dstext-sm-letter-spacing;
+                line-height: $typography-paragraph-dstext-sm-line-height;
+                color: $color-brand-brandingprimary;
+            }
+        }
+    }
+}

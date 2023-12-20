@@ -1,0 +1,239 @@
+@import '/src/styles/variables.scss';
+
+.sectionOurServices {
+    height: auto;
+    padding: 80px 0;
+
+    .desapear {
+        display: none;
+    }
+
+    >div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        gap: 24px;
+
+        .firstBox {
+            width: 100%;
+            height: 400px;
+            background-position: center;
+            background-size: 120%;
+            background-repeat: no-repeat;
+            position: relative;
+            border-radius: 16px;
+            -webkit-transition: background-size 1500ms linear;
+            -moz-transition: background-size 1500ms linear;
+            -o-transition: background-size 1500ms linear;
+            -ms-transition: background-size 1500ms linear;
+            transition: background-size 1500ms linear;
+
+            .whiteBox {
+                bottom: 48px;
+                div {
+                    margin-top: 11px;
+                    padding: 24px 16px;
+                    width: 446px;
+
+                    a {
+                        margin-top: 12px;
+                    }
+                }
+
+            }
+
+            &:hover {
+                background-size: 130%;
+                -webkit-transition: background-size 1500ms linear;
+                -moz-transition: background-size 1500ms linear;
+                -o-transition: background-size 1500ms linear;
+                -ms-transition: background-size 1500ms linear;
+                transition: background-size 1500ms linear;
+            }
+        }
+
+        .secondBox {
+            width: 100%;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+
+            > div {
+                width: 49%;
+                height: 100%;
+                background-position: center;
+                background-size: 120%;
+                background-repeat: no-repeat;
+                position: relative;
+                border-radius: 16px;
+                -webkit-transition: background-size 1500ms linear;
+                -moz-transition: background-size 1500ms linear;
+                -o-transition: background-size 1500ms linear;
+                -ms-transition: background-size 1500ms linear;
+                transition: background-size 1500ms linear;
+
+                &:hover {
+                    background-size: 130%;
+                    -webkit-transition: background-size 1500ms linear;
+                    -moz-transition: background-size 1500ms linear;
+                    -o-transition: background-size 1500ms linear;
+                    -ms-transition: background-size 1500ms linear;
+                    transition: background-size 1500ms linear;
+                }
+            }
+        }
+
+        .whiteBox {
+            position: absolute;
+            bottom: 22px;
+            left: 25px;
+
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 18px 8px 10px 15px;
+                background-color: rgba($color: #fff, $alpha: .3);
+                backdrop-filter: blur(8px);
+                width: 385px;
+                height: auto;
+                border-radius: 10px;
+                margin-top: 30px;
+
+                a {
+                    font: $montserrat-14-semibold;
+                    filter: initial;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        h2 {
+            font: $montserrat-40-semi-bold;
+            color: white;
+        }
+
+        h3 {
+            font: $montserrat-32;
+            color: white;
+        }
+
+        p, a {
+            font: $montserrat-16;
+            filter: drop-shadow(0px 2px 2px rgba(#000, .25));
+            color: white;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .sectionOurServices {
+        height: 100vh;
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .sectionOurServices {
+        height: 100vh;
+        padding: 80px 0;
+
+        .desapear{
+            display: block;
+        }
+        
+
+        > div {
+            padding: 0 24px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 0;
+
+            .firstBox {
+                height: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .whiteBox {
+                    position: initial;
+                    div {
+                        display: none;
+                    }
+                }
+            }
+
+            .secondBox {
+                flex-direction: column;
+                height: unset;
+
+                > div {
+                    width: 100%;
+                    height: 200px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: column;
+                    padding-bottom: 8px;
+
+                    .whiteBox {
+                        position: initial;
+
+                        div {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionOurServices {
+        padding: 30px 0 40px;
+        >div {
+    
+            h2, h3 {
+                font: $montserrat-24-semi-bold;
+                text-align: center;
+                color: white;
+            }
+    
+            a {
+                font: $montserrat-14-semibold;
+                color: white;
+            }
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .sectionOurServices {
+        height: auto;
+
+        > div {
+
+            .firstBox {
+                height: 100px;
+            }
+
+            .secondBox {
+                margin-top: 32px;
+
+                > div {
+                   height: 150px;
+                }
+            }
+        }
+    }
+}

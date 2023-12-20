@@ -1,0 +1,224 @@
+@import '/src/styles/variables.scss';
+
+.peopleSliderSection {
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    background-color: $light-gray-red;
+}
+
+.peopleContainer {  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    
+    >h2 {
+        font:$montserrat-40;
+        margin-bottom: 12px;
+    }
+
+    >h3 {
+        font:$montserrat-20-bold ;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 45px;
+    }
+}
+
+.sliderContainer {
+    background-color: transparent;
+    white-space: nowrap;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    padding-left: 88px;
+
+    p {
+        font: $montserrat-18;
+        color: black;
+    }
+    
+    .slidesDiv {
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 2px 0;
+        width: 100%;
+        
+        .slideContainer {
+            min-width: 23%;
+            max-width: 23%;
+            margin-right: 56px;
+            width: 100%;
+            line-height: 28px;
+            position: relative;
+            height: 340px;
+            min-width: 375px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            border-radius: 16px;
+            background-color: white;
+            -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.1);
+            -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.1);
+            box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.1);
+            padding: 24px 28px;
+
+            .letterBox {
+                background-color: $text-color;
+                color: white;
+                font-weight: 700;
+                min-width: 42px;
+                height: 42px;
+                border-radius: 4px;
+                margin-right: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            p {
+                font: $montserrat-18;
+                color: black;
+                line-height: 28px;
+            }
+
+            > div {
+                max-width: 100%;
+                white-space: initial;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 60px;
+            }
+        }
+    }
+
+    .slidesDiv::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.sliderContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.changeToTouchMode {
+    padding-left: unset !important;
+    .slidesDiv {
+        width: auto;
+        overflow-x: scroll;
+        
+        img {
+            max-height: 100%;
+            max-width: unset;
+        }
+
+        >div:first-of-type {
+            margin-left: 80px;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .sliderContainer {
+        
+        .slidesDiv {
+            overflow-x: scroll;
+            
+            .slideContainer {
+                min-width: 30%;
+                max-width: 30%;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .sliderContainer {
+        
+        .slidesDiv {
+            
+            .slideContainer {
+                min-width: 50%;
+                max-width: 50%;
+                margin-right: 24px;
+            }
+        }
+    }
+
+    .changeToTouchMode {
+        
+        .slidesDiv {
+    
+            >div:first-of-type {
+                margin-left: 20px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+    .sliderContainer {
+        padding-left: 20px;
+        
+        .slidesDiv {
+
+            .slideContainer {
+                p {
+                    font: $montserrat-16;
+                }
+            }
+            
+        }
+    }
+    .peopleSliderSection {
+        padding: 32px 0 44px;
+    }
+
+    .peopleContainer {
+
+        >h2 {
+            font:$montserrat-32;
+            margin-bottom: 24px;
+        }
+
+        h3 {
+            margin-bottom: 24px;
+            margin-top: 13px;
+            font: $montserrat-18-semi-bold;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .sliderContainer {
+        
+        .slidesDiv {
+            
+            .slideContainer {
+                min-width: 300px;
+                max-width: 300px;
+            }
+        }
+    }
+
+    .changeToTouchMode {
+        
+        .slidesDiv {
+    
+            >div:first-of-type {
+                margin-left: 10px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,278 @@
+@import '/src/styles/variables.scss';
+
+.width100 {
+    width: 100%;
+}
+
+.starsImage {
+    position: absolute;
+    right: 25%;
+    bottom: -10%;
+    z-index: 99;
+}
+
+.staticbannerSection {
+    min-height: 710px;
+    height: 70vh;
+    position: relative;
+    overflow: unset;
+}
+
+.bannerContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 600px;
+    padding-left: 20px;
+
+    .textBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 102px 0 0;
+
+        h1 {
+            font-size: $typography-display-dsdisplay-lg-bold-font-size;
+            text-decoration: $typography-display-dsdisplay-lg-bold-text-decoration;
+            font-family: $typography-display-dsdisplay-lg-bold-font-family;
+            font-weight: $typography-display-dsdisplay-lg-bold-font-weight;
+            font-style: $typography-display-dsdisplay-lg-bold-font-style;
+            font-stretch: $typography-display-dsdisplay-lg-bold-font-stretch;
+            letter-spacing: $typography-display-dsdisplay-lg-bold-letter-spacing;
+            line-height: $typography-display-dsdisplay-lg-bold-line-height;
+            color: $color-neutral-neutrallow;
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-size: $typography-paragraph-dstext-md-font-size;
+            text-decoration: $typography-paragraph-dstext-md-text-decoration;
+            font-family: $typography-paragraph-dstext-md-font-family;
+            font-weight: $typography-paragraph-dstext-md-font-weight;
+            font-style: $typography-paragraph-dstext-md-font-style;
+            font-stretch: $typography-paragraph-dstext-md-font-stretch;
+            letter-spacing: $typography-paragraph-dstext-md-letter-spacing;
+            line-height: $typography-paragraph-dstext-md-line-height;
+            color: $color-neutral-neutrallow;
+            margin-bottom: 40px;
+        }
+
+        .checkedContainer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0 24px;
+            margin-top: 32px;
+
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 7px 20px 7px 0;
+                margin-bottom: 0;
+                color: $color-neutral-neutrallow;
+                font-size: $typography-paragraph-dstext-sm-semi-bold-font-size;
+                text-decoration: $typography-paragraph-dstext-sm-semi-bold-text-decoration;
+                font-family: $typography-paragraph-dstext-sm-semi-bold-font-family;
+                font-weight: $typography-paragraph-dstext-sm-semi-bold-font-weight;
+                font-style: $typography-paragraph-dstext-sm-semi-bold-font-style;
+                font-stretch: $typography-paragraph-dstext-sm-semi-bold-font-stretch;
+                letter-spacing: $typography-paragraph-dstext-sm-semi-bold-letter-spacing;
+                line-height: $typography-paragraph-dstext-sm-semi-bold-line-height;
+            }
+        }
+    }
+}
+    
+.imageBox {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
+@media (max-width:2000px) {
+
+    .staticbannerSection {
+        justify-content: flex-end;
+    }
+
+    .imageBox {
+        max-width: unset;
+    }
+}
+
+@media (max-width:1200px) {
+    .bannerContainer {
+        max-width: 496px;
+
+        .textBox {
+            padding: 0 56px 0 0;
+
+            h1 {
+                font-size: $typography-display-dsdisplay-md-bold-font-size;
+                text-decoration: $typography-display-dsdisplay-md-bold-text-decoration;
+                font-family: $typography-display-dsdisplay-md-bold-font-family;
+                font-weight: $typography-display-dsdisplay-md-bold-font-weight;
+                font-style: $typography-display-dsdisplay-md-bold-font-style;
+                font-stretch: $typography-display-dsdisplay-md-bold-font-stretch;
+                letter-spacing: $typography-display-dsdisplay-md-bold-letter-spacing;
+                line-height: $typography-display-dsdisplay-md-bold-line-height;
+                margin-bottom: 16px;
+            }
+    
+            p {
+                font-size: $typography-paragraph-dstext-md-font-size;
+                text-decoration: $typography-paragraph-dstext-md-text-decoration;
+                font-family: $typography-paragraph-dstext-md-font-family;
+                font-weight: $typography-paragraph-dstext-md-font-weight;
+                font-style: $typography-paragraph-dstext-md-font-style;
+                font-stretch: $typography-paragraph-dstext-md-font-stretch;
+                letter-spacing: $typography-paragraph-dstext-md-letter-spacing;
+                line-height: $typography-paragraph-dstext-md-line-height;
+                margin-bottom: 40px;
+            }
+
+            .checkedContainer {
+                gap: 0 16px;
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    
+
+    .bannerContainer {
+
+        .textBox {
+            padding: 0 26px 0 0;
+
+            h1 {
+                font-size: $typography-title-dstitle-xxxl-bold-font-size;
+                text-decoration: $typography-title-dstitle-xxxl-bold-text-decoration;
+                font-family: $typography-title-dstitle-xxxl-bold-font-family;
+                font-weight: $typography-title-dstitle-xxxl-bold-font-weight;
+                font-style: $typography-title-dstitle-xxxl-bold-font-style;
+                font-stretch: $typography-title-dstitle-xxxl-bold-font-stretch;
+                letter-spacing: $typography-title-dstitle-xxxl-bold-letter-spacing;
+                line-height: $typography-title-dstitle-xxxl-bold-line-height;
+            }
+
+            .checkedContainer {
+    
+                p {
+                    font-size: $typography-paragraph-dstext-xs-semi-bold-font-size;
+                    text-decoration: $typography-paragraph-dstext-xs-semi-bold-text-decoration;
+                    font-family: $typography-paragraph-dstext-xs-semi-bold-font-family;
+                    font-weight: $typography-paragraph-dstext-xs-semi-bold-font-weight;
+                    font-style: $typography-paragraph-dstext-xs-semi-bold-font-style;
+                    font-stretch: $typography-paragraph-dstext-xs-semi-bold-font-stretch;
+                    letter-spacing: $typography-paragraph-dstext-xs-semi-bold-letter-spacing;
+                    line-height: $typography-paragraph-dstext-xs-semi-bold-line-height;
+                }
+            }
+        }
+    }
+    
+    .imageBox {
+        min-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .staticbannerSection{
+        min-height: unset;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .bannerContainer {
+        padding: 24px 24px 55px;
+
+        .textBox {
+            max-width: 50%;
+
+            h1{
+                color: white;
+                text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2509803922);
+            }
+
+            p {
+                color: white;
+                padding: 7px 5px 7px 0;
+                text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2509803922);
+            }
+        }
+    }
+    .staticbannerSection {
+        align-items: flex-end;
+        padding: 0px;
+        height: 100vh;
+    }
+    
+    .bannerContainer {
+
+        .textBox {
+            z-index: 1;
+            max-width: 100%;
+        }
+    }
+
+    .imageBox {
+        width: 100vw;
+        position: absolute;
+        max-width: unset;
+        left: 0;
+        top: 0;
+        z-index: 0;
+
+        img{
+            max-width: unset;
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+            object-position: 50% 0;
+        }
+            
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .bannerContainer {
+
+        .textBox {
+
+            p {
+                color: white;
+                font-size: $typography-paragraph-dstext-md-font-size;
+                text-decoration: $typography-paragraph-dstext-md-text-decoration;
+                font-family: $typography-paragraph-dstext-md-font-family;
+                font-weight: $typography-paragraph-dstext-md-font-weight;
+                font-style: $typography-paragraph-dstext-md-font-style;
+                font-stretch: $typography-paragraph-dstext-md-font-stretch;
+                letter-spacing: $typography-paragraph-dstext-md-letter-spacing;
+                line-height: $typography-paragraph-dstext-md-line-height;
+            }
+        }
+    }
+}

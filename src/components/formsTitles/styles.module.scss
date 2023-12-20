@@ -1,0 +1,268 @@
+@import '/src/styles/variables.scss';
+
+.formsTopicsSection {
+    background-color: #f8f8f8;
+    padding: 75px 0;
+    position: relative;
+    overflow: visible;
+}
+
+.backgroundPlay {
+    
+    background-color: #f8f8f8;
+    position: absolute;
+    top: -44px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transform: skewY(-2deg);
+}
+
+.changeBG {
+    .backgroundPlay {
+        display: none;
+    }
+}
+
+.singleFormBox {
+    position: relative;
+
+    .titleTopics {
+        font-size: $typography-title-dstitle-xl-font-size;
+        text-decoration: $typography-title-dstitle-xl-text-decoration;
+        font-family: $typography-title-dstitle-xl-font-family;
+        font-weight: $typography-title-dstitle-xl-font-weight;
+        font-style: $typography-title-dstitle-xl-font-style;
+        font-stretch: $typography-title-dstitle-xl-font-stretch;
+        letter-spacing: $typography-title-dstitle-xl-letter-spacing;
+        line-height: $typography-title-dstitle-xl-line-height;
+        color: $color-neutral-neutrallow;
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-size: $typography-paragraph-dstext-md-font-size;
+        text-decoration: $typography-paragraph-dstext-md-text-decoration;
+        font-family: $typography-paragraph-dstext-md-font-family;
+        font-weight: $typography-paragraph-dstext-md-font-weight;
+        font-style: $typography-paragraph-dstext-md-font-style;
+        font-stretch: $typography-paragraph-dstext-md-font-stretch;
+        letter-spacing: $typography-paragraph-dstext-md-letter-spacing;
+        line-height: $typography-paragraph-dstext-md-line-height;
+        color: $color-neutral-neutrallow;
+    }
+}
+
+.formsTopics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    >div {
+        width: 33%;
+        display: flex;
+        align-items: center;
+        gap: 26px;
+
+        &.flexStart {
+            justify-content: flex-start;
+
+            .newPosition {
+                position: absolute;
+                z-index: -1;
+                left: -24px;
+                top: -8%;
+            }
+        }
+
+        &.flexEnd {
+            justify-content: flex-end;
+
+            .newPosition {
+                position: absolute;
+                z-index: -1;
+                left: 40px;
+                top: -8%;
+            }
+        }
+
+        &.center {
+            justify-content: center;
+
+            .newPosition {
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                top: -8%;
+            }
+        }
+
+        div {
+            max-width: 80%;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .singleFormBox {
+        position: relative;
+    
+        p {
+            font-size: $typography-paragraph-dstext-sm-font-size;
+            text-decoration: $typography-paragraph-dstext-sm-text-decoration;
+            font-family: $typography-paragraph-dstext-sm-font-family;
+            font-weight: $typography-paragraph-dstext-sm-font-weight;
+            font-style: $typography-paragraph-dstext-sm-font-style;
+            font-stretch: $typography-paragraph-dstext-sm-font-stretch;
+            letter-spacing: $typography-paragraph-dstext-sm-letter-spacing;
+            line-height: $typography-paragraph-dstext-sm-line-height;
+            color: $color-neutral-neutrallow;
+        }
+    }
+
+    .formsTopics {
+    
+        >div {
+
+            &.flexEnd {
+
+                .newPosition {
+                    left: 51px;
+                }
+            }
+
+            &.center {
+
+                .newPosition {
+                    left: 6px;
+                }
+            }
+    
+            div {
+                max-width: 71%;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    
+    .singleFormBox {
+        position: relative;
+
+        p {
+            font-size: $typography-paragraph-dstext-xs-font-size;
+            text-decoration: $typography-paragraph-dstext-xs-text-decoration;
+            font-family: $typography-paragraph-dstext-xs-font-family;
+            font-weight: $typography-paragraph-dstext-xs-font-weight;
+            font-style: $typography-paragraph-dstext-xs-font-style;
+            font-stretch: $typography-paragraph-dstext-xs-font-stretch;
+            letter-spacing: $typography-paragraph-dstext-xs-letter-spacing;
+            line-height: $typography-paragraph-dstext-xs-line-height;
+            color: $color-neutral-neutrallow;
+        }
+    }
+
+    .formsTopics {
+        width: 100vw;
+        max-width: unset;
+        gap: 10px;
+
+        >div {
+            width: 33%;
+            justify-content: center !important;
+
+            &:after {
+                content: unset !important;
+            }
+
+            &.flexStart {
+    
+                .newPosition {
+                    left: 9px;
+                    top: 1%;
+                }
+            }
+    
+            &.flexEnd {
+    
+                .newPosition {
+                    left: -6px;
+                }
+            }
+    
+            &.center {
+    
+                .newPosition {
+                    left: -4px;
+                }
+            }
+        }
+    }
+
+    .singleFormBox {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .formsTopics {
+        flex-wrap: wrap;
+        gap: 60px;
+        padding: 0 29px;
+
+        >div {
+            width: 100%;
+            justify-content: flex-start !important;
+
+            div {
+                max-width: 100%;
+                padding-left: 20px;
+            }
+
+            &.flexStart {
+
+                .newPosition {
+                    left: 0;
+                    top: -25px;
+                }
+            }
+
+            &.flexEnd {
+
+                .newPosition {
+                    left: 0;
+                    top: -25px;
+                }
+            }
+
+            &.center {
+
+                .newPosition {
+                    left: 0;
+                    top: -25px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+
+    .formsTopicsSection {
+        padding: 60px 0 58px;
+        position: relative;
+        overflow: visible;
+
+        &::after {
+            content: "";
+            background: #F2F6FA;
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            height: 2px;
+            width: 80%;
+        }
+    }
+}

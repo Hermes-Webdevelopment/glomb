@@ -1,0 +1,210 @@
+@import '/src/styles/variables.scss';
+
+.logosContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+    div {
+        height: 100%;
+        max-height: 44px;
+        width: auto;
+    }
+
+    img {
+        height: 44px;
+        object-fit: contain;
+    }
+}
+
+.wordsContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    z-index: 9;
+
+    .sliderButtons {
+        bottom: 0px;
+        height: auto;
+        width: auto;
+        right: 16px;
+        z-index: 20;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        position: absolute;
+        background-color: transparent;
+    
+        button {
+            background-color: transparent;
+        }
+        
+        svg {
+            max-height: 41px;
+            margin-right: 6px;
+        }
+    }
+
+    .imageContainer {
+        width: 100%;
+        height: 375px;
+        position: relative;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .textContainer {
+        z-index: 9;
+        margin-top: 32px;
+
+        h2, span {
+            font: $montserrat-32;
+            text-align: center;
+            display: inline;
+        }
+
+        h2 {
+            max-width: 314px;
+        }
+
+        span {
+            color: $color-brand-brandingprimary;
+        }
+
+        > p {
+            font: $montserrat-18;
+            margin-bottom: 28px;
+        }
+
+        > p:first-of-type {
+            margin-top: 16px;
+        }
+    }
+}
+
+@media (min-width: 550px) {
+    
+    .wordsContainer {
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .wordsContainer {
+        height: 100%;
+        max-height: 100%;
+        position: relative;
+        min-height: 800px;
+
+        .sliderButtons {
+            bottom: 40px;
+            right: 35px;
+        }
+    
+        .imageContainer {
+            width: 100%;
+            height: calc(100% + 32px);
+            min-height: 800px;
+
+            img {
+                min-height: 800px;
+            }
+        }
+
+        .textContainer {
+            width: 90%;
+            height: auto;
+            background-color: rgba($color: #fff, $alpha: .7);
+            backdrop-filter: blur(10px);
+            position: absolute;
+            right: 50px;
+            top: 36px;
+            padding: 52px 52px 56px 41px;
+            border-radius: 24px;
+            max-width: 500px;
+        }
+    }
+    
+}
+
+@media (min-width: 992px) {
+
+        .textContainer {
+            width: 55%;
+            height: auto;
+            background-color: rgba($color: #fff, $alpha: .7);
+            backdrop-filter: blur(10px);
+            position: absolute;
+            right: 10%;
+            top: 10%;
+            padding: 52px 52px 56px 41px;
+            border-radius: 24px;
+            max-width: 450px;
+        }
+}
+
+@media (min-width: 1200px) {
+
+    .logosContainer {
+        
+        div {
+            max-height: 60px;
+        }
+    
+        img {
+            height: 60px;
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+
+    .wordsContainer {
+
+        .textContainer {
+            right: 50px;
+            width: 60%;
+            max-width: 550px;
+            padding: 40px 32px 40px 45px;
+            
+            h2, span {
+                font:$montserrat-36; 
+                text-align: center;
+            }
+
+            >p {
+                font: $montserrat-20;
+                margin-bottom: 32px;
+            }
+
+            > p:first-of-type {
+                margin-top: 60px;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: -37px;
+                    left: 0;
+                    right: 0;
+                    height: 0.5em;
+                    width: 64px;
+                    border-top: 1px solid $color-brand-brandingprimary;;
+                  }
+            }
+
+            p:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

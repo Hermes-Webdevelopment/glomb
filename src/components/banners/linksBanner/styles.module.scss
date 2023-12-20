@@ -1,0 +1,220 @@
+@import '/src/styles/variables.scss';
+
+.linksContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+
+    .textBox {
+        width: 40%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+
+        h1 {
+            font-family: 'Poppins';
+            font-size: 80px;
+            font-weight: 600;
+            margin-bottom: 56px;
+        }
+
+        >p {
+            font-size: $typography-paragraph-dstext-xl-font-size;
+            text-decoration: $typography-paragraph-dstext-xl-text-decoration;
+            font-family: $typography-paragraph-dstext-xl-font-family;
+            font-weight: $typography-paragraph-dstext-xl-font-weight;
+            font-style: $typography-paragraph-dstext-xl-font-style;
+            font-stretch: $typography-paragraph-dstext-xl-font-stretch;
+            letter-spacing: $typography-paragraph-dstext-xl-letter-spacing;
+            line-height: $typography-paragraph-dstext-xl-line-height;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 345px;
+
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                padding: 0;
+
+                .svgBoxContainer {
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    justify-content: center;
+                    background-color: white;
+                    filter: drop-shadow(0 0 0.3rem rgba(0,0,0,0.25));
+                }
+
+                P {
+                    font-size: $typography-paragraph-dstext-sm-semi-bold-font-size;
+                    text-decoration: $typography-paragraph-dstext-sm-semi-bold-text-decoration;
+                    font-family: $typography-paragraph-dstext-sm-semi-bold-font-family;
+                    font-weight: $typography-paragraph-dstext-sm-semi-bold-font-weight;
+                    font-style: $typography-paragraph-dstext-sm-semi-bold-font-style;
+                    font-stretch: $typography-paragraph-dstext-sm-semi-bold-font-stretch;
+                    letter-spacing: $typography-paragraph-dstext-sm-semi-bold-letter-spacing;
+                    line-height: $typography-paragraph-dstext-sm-semi-bold-line-height;
+                    text-align: center;
+                    color: $branding-primary;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+
+    .imageBox {
+        width: 47%;
+        height: 100vh;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+    }
+}
+
+
+@media (max-width:1200px) {
+    .linksContainer {
+
+        .textBox {
+
+            h1 {
+                font-family: 'Poppins';
+                font-size: 60px;
+                font-weight: 600;
+                margin-bottom: 56px;
+            }
+
+            >p {
+                font-size: $typography-paragraph-dstext-md-font-size;
+                text-decoration: $typography-paragraph-dstext-md-text-decoration;
+                font-family: $typography-paragraph-dstext-md-font-family;
+                font-weight: $typography-paragraph-dstext-md-font-weight;
+                font-style: $typography-paragraph-dstext-md-font-style;
+                font-stretch: $typography-paragraph-dstext-md-font-stretch;
+                letter-spacing: $typography-paragraph-dstext-md-letter-spacing;
+                line-height: $typography-paragraph-dstext-md-line-height;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    
+}
+
+@media (max-width: 768px) {
+    .linksContainer {
+        align-items: flex-end;
+        height: 100vh;
+        padding: 0 18px;
+    }
+    
+    .linksContainer {
+
+        .textBox {
+            width: 100%;
+            margin: unset;
+
+            h1 {
+                font-size: $typography-display-dsdisplay-md-semi-bold-font-size;
+                text-decoration: $typography-display-dsdisplay-md-semi-bold-text-decoration;
+                font-family: $typography-display-dsdisplay-md-semi-bold-font-family;
+                font-weight: $typography-display-dsdisplay-md-semi-bold-font-weight;
+                font-style: $typography-display-dsdisplay-md-semi-bold-font-style;
+                font-stretch: $typography-display-dsdisplay-md-semi-bold-font-stretch;
+                letter-spacing: $typography-display-dsdisplay-md-semi-bold-letter-spacing;
+                line-height: $typography-display-dsdisplay-md-semi-bold-line-height;
+                color: white;
+                margin-bottom: 16px;
+            }
+    
+            p {
+                font-size: $typography-paragraph-dstext-md-font-size;
+                text-decoration: $typography-paragraph-dstext-md-text-decoration;
+                font-family: $typography-paragraph-dstext-md-font-family;
+                font-weight: $typography-paragraph-dstext-md-font-weight;
+                font-style: $typography-paragraph-dstext-md-font-style;
+                font-stretch: $typography-paragraph-dstext-md-font-stretch;
+                letter-spacing: $typography-paragraph-dstext-md-letter-spacing;
+                line-height: $typography-paragraph-dstext-md-line-height;
+                color: white;
+                margin-bottom: 48px;
+            }
+
+            div {
+
+                a {
+                    .svgBoxContainer {
+                        width: 42px;
+                        height: 42px;
+                        border-radius: 50%;
+                        justify-content: center;
+                        background-color: white;
+                        filter: drop-shadow(0 0 0.3rem rgba(0,0,0,0.25));
+                    }
+        
+                    p {
+                        font-size: $typography-paragraph-dstext-xxs-semi-bold-font-size;
+                        text-decoration: $typography-paragraph-dstext-xxs-semi-bold-text-decoration;
+                        font-family: $typography-paragraph-dstext-xxs-semi-bold-font-family;
+                        font-weight: $typography-paragraph-dstext-xxs-semi-bold-font-weight;
+                        font-style: $typography-paragraph-dstext-xxs-semi-bold-font-style;
+                        font-stretch: $typography-paragraph-dstext-xxs-semi-bold-font-stretch;
+                        letter-spacing: $typography-paragraph-dstext-xxs-semi-bold-letter-spacing;
+                        line-height: $typography-paragraph-dstext-xxs-semi-bold-line-height;
+                        color: white;
+                        margin-bottom: 0px
+                    }
+    
+                }
+            }
+        }
+
+        .imageBox {
+            width: 100vw;
+            position: absolute;
+            max-width: unset;
+            left: 0;
+            top: 0;
+            z-index: -1;
+
+            img{
+                max-width: unset;
+                object-fit: cover;
+                width: 100vw;
+                height: 100vh;
+                object-position: 50% 0;
+            }
+                
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .linksContainer {
+        padding-bottom: 56px;
+        .textBox {
+            div {
+                width: 100%;   
+            }
+        }
+    }
+}

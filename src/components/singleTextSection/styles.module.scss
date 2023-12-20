@@ -1,0 +1,47 @@
+@import '/src/styles/variables.scss';
+
+.textSection {
+    padding: 120px 350px ;
+    font-size: $typography-emphasis-dsemphasis-lg-font-size;
+    text-decoration: $typography-emphasis-dsemphasis-lg-text-decoration;
+    font-family: $typography-emphasis-dsemphasis-lg-font-family;
+    font-weight: $typography-emphasis-dsemphasis-lg-font-weight;
+    font-style: $typography-emphasis-dsemphasis-lg-font-style;
+    font-stretch: $typography-emphasis-dsemphasis-lg-font-stretch;
+    letter-spacing: $typography-emphasis-dsemphasis-lg-letter-spacing;
+    line-height: $typography-emphasis-dsemphasis-lg-line-height;
+    color: $color-neutral-neutrallow;
+    text-align: center;
+}
+
+@media (max-width:1200px) {
+    .textSection {
+        padding: 120px 160px ;
+    }
+    
+}
+
+@media (max-width: 992px) {
+    .textSection {
+        font-size: $typography-emphasis-dsemphasis-sm-font-size;
+        text-decoration: $typography-emphasis-dsemphasis-sm-text-decoration;
+        font-family: $typography-emphasis-dsemphasis-sm-font-family;
+        font-weight: $typography-emphasis-dsemphasis-sm-font-weight;
+        font-style: $typography-emphasis-dsemphasis-sm-font-style;
+        font-stretch: $typography-emphasis-dsemphasis-sm-font-stretch;
+        letter-spacing: $typography-emphasis-dsemphasis-sm-letter-spacing;
+        line-height: $typography-emphasis-dsemphasis-sm-line-height;
+    }
+}
+
+@media (max-width: 768px) {
+    .textSection {
+        padding: 80px 80px ;
+    }
+}
+
+@media (max-width: 576px) {
+    .textSection {
+        padding: 80px 40px ;
+    }
+}
