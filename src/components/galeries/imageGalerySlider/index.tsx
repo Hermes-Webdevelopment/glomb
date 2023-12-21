@@ -64,6 +64,7 @@ export default function ImageGalerySlider(props: imageGalerySliderInterface) {
                                 <SwiperSlide key={image.imageUrl} className={`${styles.changeActiveSlider} ${styles.nextOrPrevSlider}`}>
                                     <Image 
                                         quality={100}
+                                        unoptimized={true}
                                         loading="lazy"
                                         src={image.imageUrl}
                                         alt={image.imageDescription}

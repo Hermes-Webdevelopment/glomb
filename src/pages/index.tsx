@@ -9,6 +9,7 @@ import { gtmCaller } from '../components/scriptCaller/gtmScript'
 import { clarityCaller } from '../components/scriptCaller/clarityScript'
 import BlueButton from '../components/atons/blueButton'
 import dynamic from 'next/dynamic';
+import TextSlider from '../components/galeries/textSlider'
 
 const BlogSlider = dynamic(() =>  import('../components/galeries/blogSlider'));
 const ImageSlider = dynamic(() =>  import('../components/galeries/imageSlider'));
@@ -400,42 +401,30 @@ return (
           btnText='Acessar Blog'
           btnLink='/'
           blogWPApi='https://blog.glomb.com.br/wp-json/wp/v2/posts'
-          blogPosts={[
-            {
-              img:'/assets/images/home/1-escritorio-advocacia-especializado-INSS-direito-trabalhista-previdenciario-melhor-do-brasil.webp',
-              imgaAlt:'teste',
-              postTitle:'Revisão da Vida Toda pode aumentar 5x sua Aposentadoria',
-              postText: 'A Revisão da Vida Toda pode aumentar em até 5x o valor de sua Aposentadoria ou Pensão. Descubra como.',
-              actionBtn:'Ver mais'
-            },{
-              img:'/assets/images/home/1-escritorio-advocacia-especializado-INSS-direito-trabalhista-previdenciario-melhor-do-brasil.webp',
-              imgaAlt:'teste',
-              postTitle:'Guia Completo do Auxílio-Acidente',
-              postText: 'Auxílio-acidente: O que é? quem tem direito? qual o valor? como conseguir? qual a duração? como funciona o auxílio-acidente.',
-              actionBtn:'Ver mais'
-            },{
-              img:'/assets/images/home/1-escritorio-advocacia-especializado-INSS-direito-trabalhista-previdenciario-melhor-do-brasil.webp',
-              imgaAlt:'teste',
-              postTitle:'Tudo sobre Benefício Assistencial (LOAS)',
-              postText: 'Nesse artigo explicamos o que é, quem tem direito e como funciona o Benefício Assistencial ou BPC (Benefício de Prestação Continuada) - LOAS.',
-              actionBtn:'Ver mais'
-            },{
-              img:'/assets/images/home/1-escritorio-advocacia-especializado-INSS-direito-trabalhista-previdenciario-melhor-do-brasil.webp',
-              imgaAlt:'teste',
-              postTitle:'Mercado de trabalho no Brasil hoje vive à margem da CLT',
-              postText: 'O mercado de trabalho, hoje, vive à margem da CLT. Segundo o IBGE, das 100 milhões de pessoas ocupadas hoje, 39 milhões estão na informalidade.',
-              actionBtn:'Ver mais'
-            },{
-              img:'/assets/images/home/1-escritorio-advocacia-especializado-INSS-direito-trabalhista-previdenciario-melhor-do-brasil.webp',
-              imgaAlt:'teste',
-              postTitle:'Nova lista de doenças do trabalho inclui covid-19, burnout e vários tipos de câncer.',
-              postText: 'O Ministério da Saúde divulgou na quarta-feira (29) atualização da lista de doenças relacionadas ao trabalho. A lista inclui COVID, burnout e outras.',
-              actionBtn:'Ver mais'
-            }
-          ]}
         />
 
         <Map />
+
+        <TextSlider 
+          title={'Iniciativas que apoiamos'} 
+          subText={'O Glomb & Advogados Associados tem o compromisso permanente de contribuir para um país melhor.'} 
+          textArray={[
+            {
+              text: 'Nossa atuação está fortemente relacionada à erradicação da pobreza, fome zero, promoção da igualdade de gênero, luta por condições de trabalho decentes e crescimento econômico, redução das desigualdades e acesso à justiça.',
+              hasLogos: true
+            },
+            {
+              text: <>Somos signatários do Pacto Global das Nações Unidas e alinhamos nossas operações de acordo com os 10 princípios universais nas áreas de Direitos Humanos, Trabalho, Meio Ambiente e Combate à Corrupção. <br /> 
+                      Fazemos parte desse pacto que é a maior iniciativa de sustentabilidade corporativa do mundo e contribuímos desenvolvendo ações para o enfrentamento dos desafios que a nossa sociedade enfrenta.</>,
+              hasLogos: false
+            },
+            {
+              text: <>Além disso, apoiamos o Hospital Pequeno Príncipe, uma instituição filantrópica sem fins lucrativos que destina 70% de sua capacidade para pacientes atendidos pelo Sistema Único de Saúde - SUS. <br /> 
+                      É uma grande satisfação contribuir para que esse hospital pediátrico possa continuar beneficiando milhares de crianças e adolescentes ano após ano.</>,
+              hasLogos: false
+            },
+          ]}        
+        />
 
         <SimpleFooter 
           logo='glomb'
