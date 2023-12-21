@@ -6,6 +6,7 @@ import React from 'react';
 import SwiperButtons from './swiperButtons';
 import BlueButton from '../../atons/blueButton';
 import { getScreenSiteAndWidth } from '../../../helpers/screenSize';
+import Link from 'next/link';
 
 interface BlogSliderInterface {
     title: string | ReactNode,
@@ -46,11 +47,14 @@ export default function BlogSlider(props: BlogSliderInterface) {
           
     }, [])
 
+    console.log(data)
+    console.log(loading)
+
 
     return (
         <>
             {
-                loading && data !== undefined &&
+                !loading && data !== undefined &&
                 <section className={styles.blogSliderSection}>
                     <div className={`container ${styles.blogSliderContainer}`}>
                         <h2>{title}</h2>
@@ -69,15 +73,13 @@ export default function BlogSlider(props: BlogSliderInterface) {
                                         <SwiperSlide style={{padding: '4px'}}>
                                             <div className={styles.postContainer}>
                                                 <div>
-                                                    <Image
-                                                        height={250}
-                                                        width={392}
+                                                    <img
                                                         src={post.yoast_head_json.og_image[0].url}
                                                         alt={post.yoast_head_json.og_title}
                                                     />
                                                     <div className={styles.postTitle}>
                                                         <h3>
-                                                            {post.postTitle.rendered}
+                                                            {post.yoast_head_json.title}
                                                         </h3>
                                                     </div>
                                                     <div className={styles.postText}>
@@ -86,9 +88,9 @@ export default function BlogSlider(props: BlogSliderInterface) {
                                                         </span>
                                                     </div>
                                                 </div>
-                                                <span>
-                                                    <u>{post.link}</u>
-                                                </span>
+                                                <Link href={post.link} className={styles.saibaMais}>
+                                                    <u>Saiba mais</u>
+                                                </Link>
                                             </div>
                                         </SwiperSlide>
                                     )
