@@ -33,7 +33,7 @@ const Home: NextPage = () => {
     };
   }, []);
   
-  const linkWhatsAp = 'https://wa.me/554132239132?text=Olá!+Gostaria+de+analisar+meu+caso+sem+compromisso+-+loas-bpc'
+  const linkWhatsAp = 'https://wa.me/554132239132?text=Olá!+Gostaria+de+analisar+meu+caso+sem+compromisso'
 
   useEffect(() => {
     window.addEventListener('load', gtmCaller)
@@ -87,21 +87,21 @@ return (
         imgMobile={'/assets/images/home/3-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista-mobile.webp'} 
         imgAlt={'Escritório de advocacia de direito previdenciário e direito do trabalho localizado no centro de Curitiba. Balcão da recepção branco com a logo do escritório ao fundo em uma parede de mármore.'} 
         buttonText={'Quero ser atendido'} 
-        buttonLink={'/'}        
+        buttonLink={linkWhatsAp}      
       />
       
       <OurServices 
         title1={'Nossos Serviços'}
-        link1={'/'}
+        link1={linkWhatsAp}
         text1={<>
           Somos um <strong>escritório de advocacia</strong> focado na <strong>excelência</strong> desde o atendimento à técnica jurídica.<br />
           Nossa <strong>missão</strong> é proporcionar a <strong>melhor experiência</strong> na prestação de serviços, buscando <strong>soluções ágeis</strong> e <strong>eficientes</strong> para <strong>defender</strong> seus direitos.
         </>}
         title2={'Direito do Trabalho'}
-        link2={'/'}
+        link2={linkWhatsAp}
         text2={<>Atuamos de forma ampla na <strong>defesa</strong> dos seus <strong>direitos trabalhistas</strong>, focados em promover <strong>justiça e equilíbrio</strong> nas relações de trabalho.</>}
         title3={'Direito Previdenciário'}
-        link3={'/'}
+        link3={linkWhatsAp}
         text3={<>Defendemos seu <strong>direito</strong> aos benefícios da <strong>Previdência Social</strong>. Conte com nossa experiência para <strong>conquistar</strong> uma vida mais estável e segura.</>} 
         bgimg1={'/assets/images/home/glomb_recepcao_entrada.webp'} 
         bgimg2={'/assets/images/home/melhor-advogado-direto-trabalhista-do-brasil.webp'} 
@@ -399,7 +399,7 @@ return (
         <BlogSlider 
           title='Blog e notícias'
           btnText='Acessar Blog'
-          btnLink='/'
+          btnLink={'/blog'}
           blogWPApi='https://blog.glomb.com.br/wp-json/wp/v2/posts'
         />
 

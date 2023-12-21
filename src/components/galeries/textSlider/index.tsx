@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import React from 'react';
 import SwiperButtons from './swiperButtons';
 import { getScreenSiteAndWidth } from '../../../helpers/screenSize';
-import Link from 'next/link';
 
 interface testSliderInterface {
     title: string | ReactNode,
