@@ -7,12 +7,14 @@ import Map from '../components/map'
 import { useEffect, useState } from 'react'
 import { gtmCaller } from '../components/scriptCaller/gtmScript'
 import { clarityCaller } from '../components/scriptCaller/clarityScript'
-import PeopleSlider from '../components/PeopleSlider'
-import BlogSlider from '../components/galeries/blogSlider'
-import SimpleFooter from '../components/footerFormats/simpleFooter'
 import BlueButton from '../components/atons/blueButton'
-import ImageSlider from '../components/galeries/imageSlider'
-import ClientsCommentsSlider from '../components/comentsSlider'
+import dynamic from 'next/dynamic';
+
+const BlogSlider = dynamic(() =>  import('../components/galeries/blogSlider'));
+const ImageSlider = dynamic(() =>  import('../components/galeries/imageSlider'));
+const ClientsCommentsSlider = dynamic(() =>  import('../components/comentsSlider'));
+const PeopleSlider = dynamic(() =>  import('../components/PeopleSlider'));
+const SimpleFooter = dynamic(() =>  import('../components/footerFormats/simpleFooter'));
 
 const Home: NextPage = () => {
   const [shown, setShown] = useState(false);
