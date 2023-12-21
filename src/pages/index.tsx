@@ -83,7 +83,7 @@ return (
             <p> Atendemos em todo o <strong>Brasil.</strong></p>
           </>} 
         img={'/assets/images/home/3-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista.webp'} 
-        imgMobile={'/assets/images/home/3-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista.webp'} 
+        imgMobile={'/assets/images/home/3-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista-mobile.webp'} 
         imgAlt={'Escritório de advocacia de direito previdenciário e direito do trabalho localizado no centro de Curitiba. Balcão da recepção branco com a logo do escritório ao fundo em uma parede de mármore.'} 
         buttonText={'Quero ser atendido'} 
         buttonLink={'/'}        
