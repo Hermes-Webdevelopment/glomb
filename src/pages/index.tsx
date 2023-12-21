@@ -35,8 +35,8 @@ const Home: NextPage = () => {
   const linkWhatsAp = 'https://wa.me/554132239132?text=Olá!+Gostaria+de+analisar+meu+caso+sem+compromisso+-+loas-bpc'
 
   useEffect(() => {
-    window.addEventListener('load', gtmCaller)
-    window.addEventListener('load', clarityCaller)
+    window.addEventListener('DOMContentLoaded', gtmCaller)
+    window.addEventListener('DOMContentLoaded', clarityCaller)
   },[])
   
 return (
