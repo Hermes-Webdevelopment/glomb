@@ -101,11 +101,15 @@
             object-fit: cover;
         }
 
-        > span {
+        .saibaMais {
             font: $montserrat-16-semibold;
             color: $branding-primary;
             padding-left: 16px;
             padding-bottom: 16px;
+            margin-top: unset !important;
+            width: unset !important;
+            background-color: unset !important;
+            border: unset;
         }
     }
     
