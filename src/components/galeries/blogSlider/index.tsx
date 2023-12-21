@@ -6,6 +6,7 @@ import React from 'react';
 import SwiperButtons from './swiperButtons';
 import BlueButton from '../../atons/blueButton';
 import { getScreenSiteAndWidth } from '../../../helpers/screenSize';
+import { Autoplay } from 'swiper/modules';
 
 interface BlogSliderInterface {
     title: string | ReactNode,
@@ -36,13 +37,15 @@ export default function News(props: BlogSliderInterface) {
                     spaceBetween={50}
                     slidesPerView={screenSize.dynamicWidth <= 768 ? 1 : 1200 > screenSize.dynamicWidth && screenSize.dynamicWidth > 768 ? 2 : 3}
                     loop
-                    autoplay={true}
-                    navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}
-                    className={styles.swiperContainer}
+                    autoplay={{
+                      delay: 1500,
+                      disableOnInteraction: true,
+                    }}
+                    modules={[Autoplay]}
                 >
                     <SwiperButtons />
                     {
-                        blogPosts.map(post => {
+                        blogPosts.map((post: BlogPosts) => {
                             return (
                                 <SwiperSlide style={{padding: '4px'}}>
                                     <div className={styles.postContainer}>

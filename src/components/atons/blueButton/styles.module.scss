@@ -19,14 +19,7 @@
             -o-animation: all 0.5s ease-out;
         
             p {
-                font-size: $typography-paragraph-dstext-sm-font-size;
-                text-decoration: $typography-paragraph-dstext-sm-text-decoration;
-                font-family: $typography-paragraph-dstext-sm-font-family;
-                font-weight: $typography-paragraph-dstext-sm-font-weight;
-                font-style: $typography-paragraph-dstext-sm-font-style;
-                font-stretch: $typography-paragraph-dstext-sm-font-stretch;
-                letter-spacing: $typography-paragraph-dstext-sm-letter-spacing;
-                line-height: $typography-paragraph-dstext-sm-line-height;
+                font: $montserrat-16;
                 opacity: 1;
                 margin-bottom: 0;
                 color: white;
@@ -110,14 +103,7 @@
 @media (min-width: 576px) {
     .buttonContainer {
         width: 100%;
-        font-size: $typography-paragraph-dstext-sm-semi-bold-font-size;
-        text-decoration: $typography-paragraph-dstext-sm-semi-bold-text-decoration;
-        font-family: $typography-paragraph-dstext-sm-semi-bold-font-family;
-        font-weight: $typography-paragraph-dstext-sm-semi-bold-font-weight;
-        font-style: $typography-paragraph-dstext-sm-semi-bold-font-style;
-        font-stretch: $typography-paragraph-dstext-sm-semi-bold-font-stretch;
-        letter-spacing: $typography-paragraph-dstext-sm-semi-bold-letter-spacing;
-        line-height: $typography-paragraph-dstext-sm-semi-bold-line-height;
+        font: $montserrat-16;
         
     }
 }
@@ -142,8 +128,9 @@
 
 @media (min-width: 1200px) {
     .buttonContainer {
-        width: 95%;
-        padding: 14px;
-        font-size: $typography-paragraph-dstext-md-semi-bold-font-size;
+        padding: 15px !important;
+        p {   
+            font: $montserrat-20-semi-bold !important;
+        }
     }
 }
