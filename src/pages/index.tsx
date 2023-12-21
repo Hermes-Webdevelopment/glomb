@@ -187,7 +187,7 @@ return (
             
             {
               imageUrl: '/assets/images/advogados/regiani-aparecida-correia-advogada-previdencia-social.webp',
-              imageTitle: 'Regiane Aparecida Correia',
+              imageTitle: 'Regiane Correia',
               imageAlt: 'Regiani Aparecida Correia, OAB/PR 89.032, advogada especialista em direito previdenciário.',
               imageSubTitle: 'Advogado',
               text: 'OAB/PR 89.032'
@@ -399,31 +399,31 @@ return (
           btnLink='/'
           blogPosts={[
             {
-              img:'/assets/images/home/office.jpg',
+              img:'/assets/images/home/1-escritorio-advocacia-especializado-INSS-direito-trabalhista-previdenciario-melhor-do-brasil.webp',
               imgaAlt:'teste',
               postTitle:'Revisão da Vida Toda pode aumentar 5x sua Aposentadoria',
               postText: 'A Revisão da Vida Toda pode aumentar em até 5x o valor de sua Aposentadoria ou Pensão. Descubra como.',
               actionBtn:'Ver mais'
             },{
-              img:'/assets/images/home/office.jpg',
+              img:'/assets/images/home/1-escritorio-advocacia-especializado-INSS-direito-trabalhista-previdenciario-melhor-do-brasil.webp',
               imgaAlt:'teste',
               postTitle:'Guia Completo do Auxílio-Acidente',
               postText: 'Auxílio-acidente: O que é? quem tem direito? qual o valor? como conseguir? qual a duração? como funciona o auxílio-acidente.',
               actionBtn:'Ver mais'
             },{
-              img:'/assets/images/home/office.jpg',
+              img:'/assets/images/home/1-escritorio-advocacia-especializado-INSS-direito-trabalhista-previdenciario-melhor-do-brasil.webp',
               imgaAlt:'teste',
               postTitle:'Tudo sobre Benefício Assistencial (LOAS)',
               postText: 'Nesse artigo explicamos o que é, quem tem direito e como funciona o Benefício Assistencial ou BPC (Benefício de Prestação Continuada) - LOAS.',
               actionBtn:'Ver mais'
             },{
-              img:'/assets/images/home/office.jpg',
+              img:'/assets/images/home/1-escritorio-advocacia-especializado-INSS-direito-trabalhista-previdenciario-melhor-do-brasil.webp',
               imgaAlt:'teste',
               postTitle:'Mercado de trabalho no Brasil hoje vive à margem da CLT',
               postText: 'O mercado de trabalho, hoje, vive à margem da CLT. Segundo o IBGE, das 100 milhões de pessoas ocupadas hoje, 39 milhões estão na informalidade.',
               actionBtn:'Ver mais'
             },{
-              img:'/assets/images/home/office.jpg',
+              img:'/assets/images/home/1-escritorio-advocacia-especializado-INSS-direito-trabalhista-previdenciario-melhor-do-brasil.webp',
               imgaAlt:'teste',
               postTitle:'Nova lista de doenças do trabalho inclui covid-19, burnout e vários tipos de câncer.',
               postText: 'O Ministério da Saúde divulgou na quarta-feira (29) atualização da lista de doenças relacionadas ao trabalho. A lista inclui COVID, burnout e outras.',

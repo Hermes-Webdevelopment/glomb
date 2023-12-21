@@ -17,27 +17,13 @@
 .peopleContainer {
 
     >h2 {
-        font-size: $typography-display-dsdisplay-sm-bold-font-size;
-        text-decoration: $typography-display-dsdisplay-sm-bold-text-decoration;
-        font-family: $typography-display-dsdisplay-sm-bold-font-family;
-        font-weight: $typography-display-dsdisplay-sm-bold-font-weight;
-        font-style: $typography-display-dsdisplay-sm-bold-font-style;
-        font-stretch: $typography-display-dsdisplay-sm-bold-font-stretch;
-        letter-spacing: $typography-display-dsdisplay-sm-bold-letter-spacing;
-        line-height: $typography-display-dsdisplay-sm-bold-line-height;
+        font: $montserrat-40-bold;
         text-align: center;
         margin-bottom: 24px;
     }
 
     >.subtitleParagraph {
-        font-size: $typography-paragraph-dstext-xl-font-size;
-        text-decoration: $typography-paragraph-dstext-xl-text-decoration;
-        font-family: $typography-paragraph-dstext-xl-font-family;
-        font-weight: $typography-paragraph-dstext-xl-font-weight;
-        font-style: $typography-paragraph-dstext-xl-font-style;
-        font-stretch: $typography-paragraph-dstext-xl-font-stretch;
-        letter-spacing: $typography-paragraph-dstext-xl-letter-spacing;
-        line-height: $typography-paragraph-dstext-xl-line-height;
+        font: $montserrat-24;
         text-align: center;
         margin-bottom: 80px;
     }
@@ -49,14 +35,6 @@
     width: 100vw;
     overflow: hidden;
     position: relative;
-    padding-left: 88px;
-    
-    .slidesDiv {
-        display: flex;
-        width: max-content;
-        overflow-x: scroll;
-        flex-flow: row nowrap;
-        
 
         img {
             max-height: 100%;
@@ -72,7 +50,7 @@
             flex-direction: column;
             position: relative;
             display: inline-block;
-            margin-right: 56px;
+            padding-left: 20px;
         }
 
         .descriptionDiv {
@@ -115,15 +93,7 @@
                 color: white;
             }
         }
-    }
-
-    .slidesDiv::-webkit-scrollbar{
-        display: none;
-    }
-}
-
-.sliderContainer::-webkit-scrollbar {
-    display: none;
+    
 }
 
 .changeToTouchMode {
