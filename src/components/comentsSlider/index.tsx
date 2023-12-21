@@ -46,8 +46,8 @@ export default function ClientsCommentsSlider(props: ClientsCommentsSliderInterf
             </h3>
         </div>
         <Swiper
-            spaceBetween={50}
-            slidesPerView={screenSize.dynamicWidth <= 768 ? 1.5 : 1200 > screenSize.dynamicWidth && screenSize.dynamicWidth > 768 ? 3.5 : 3.5}
+            spaceBetween={screenSize.dynamicWidth <= 768 ? 10 : 50}
+            slidesPerView={screenSize.dynamicWidth <= 768 ? 1.1 : 1200 > screenSize.dynamicWidth && screenSize.dynamicWidth > 768 ? 2.5 : 3.5}
             loop
             autoplay={{
               delay: 1500,

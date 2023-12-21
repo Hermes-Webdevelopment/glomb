@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,6 +12,7 @@ interface BlogSliderInterface {
     title: string | ReactNode,
     btnText: string,
     btnLink: string,
+    blogWPApi: string,
     blogPosts: BlogPosts[]
 }
 
@@ -25,9 +26,23 @@ interface BlogPosts{
 
 export default function News(props: BlogSliderInterface) {
 
-    const {title, btnText, btnLink, blogPosts} = props
+    const {title, btnText, btnLink, blogPosts, blogWPApi} = props
 
     const screenSize = getScreenSiteAndWidth()
+
+    const [data, setData] = useState()
+    const [loading, setLoading] = useState(Boolean)
+
+    useEffect(() => {
+        fetch(blogWPApi)
+          .then((res) => res.json())
+          .then((data) => {
+            setData(data)
+            setLoading(false)
+          })
+     }, [])
+
+     console.log(data)
 
     return (
         <section className={styles.blogSliderSection}>
@@ -41,6 +56,7 @@ export default function News(props: BlogSliderInterface) {
                       delay: 1500,
                       disableOnInteraction: true,
                     }}
+                    navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}
                     modules={[Autoplay]}
                 >
                     <SwiperButtons />
