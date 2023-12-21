@@ -13,20 +13,11 @@ interface BlogSliderInterface {
     btnText: string,
     btnLink: string,
     blogWPApi: string,
-    blogPosts: BlogPosts[]
-}
-
-interface BlogPosts{
-    img: string,
-    imgaAlt: string,
-    postTitle: string,
-    postText: string,
-    actionBtn:string
 }
 
 export default function BlogSlider(props: BlogSliderInterface) {
 
-    const {title, btnText, btnLink, blogPosts, blogWPApi} = props
+    const {title, btnText, btnLink, blogWPApi} = props
 
     const screenSize = getScreenSiteAndWidth()
 
@@ -46,10 +37,6 @@ export default function BlogSlider(props: BlogSliderInterface) {
           });
           
     }, [])
-
-    console.log(data)
-    console.log(loading)
-
 
     return (
         <>
