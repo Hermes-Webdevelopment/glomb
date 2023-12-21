@@ -54,7 +54,7 @@ export default function BlogSlider(props: BlogSliderInterface) {
     return (
         <>
             {
-                !loading && data !== undefined &&
+                !loading && data !== undefined ?
                 <section className={styles.blogSliderSection}>
                     <div className={`container ${styles.blogSliderContainer}`}>
                         <h2>{title}</h2>
@@ -91,6 +91,38 @@ export default function BlogSlider(props: BlogSliderInterface) {
                                                 <Link href={post.link} className={styles.saibaMais}>
                                                     <u>Saiba mais</u>
                                                 </Link>
+                                            </div>
+                                        </SwiperSlide>
+                                    )
+                                })
+                            }
+                        </Swiper>
+                        <BlueButton 
+                            buttonLink={btnLink}
+                            buttonText={btnText}
+                            transparentMode={true}
+                        />
+                    </div>
+                </section>
+                :
+                <section className={styles.blogSliderSection}>
+                    <div className={`container ${styles.blogSliderContainer}`}>
+                        <h2>{title}</h2>
+
+                        <Swiper
+                            spaceBetween={50}
+                            slidesPerView={screenSize.dynamicWidth <= 768 ? 1 : 1200 > screenSize.dynamicWidth && screenSize.dynamicWidth > 768 ? 2 : 3}
+                            loop
+                            navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}
+                            className={styles.swiperContainer}
+                        >
+                            <SwiperButtons />
+                            {
+                                (screenSize.dynamicWidth <= 768 ? [1] : 1200 > screenSize.dynamicWidth && screenSize.dynamicWidth > 768 ? [1,2] : [1,2,3]).map(number => {
+                                    return (
+                                        <SwiperSlide style={{padding: '4px'}}>
+                                            <div className={`${styles.postContainer} ${styles.postContainerSkeleton}`}>
+                                                <div className={styles.ldsDualRing}></div>
                                             </div>
                                         </SwiperSlide>
                                     )
