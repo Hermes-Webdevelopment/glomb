@@ -82,8 +82,8 @@ return (
             Por isso, somos <strong>referência em serviços jurídicos.</strong></p>
             <p> Atendemos em todo o <strong>Brasil.</strong></p>
           </>} 
-        img={'/assets/images/home/2-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista.webp'} 
-        imgMobile={'/assets/images/home/2-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista.webp'} 
+        img={'/assets/images/home/3-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista.webp'} 
+        imgMobile={'/assets/images/home/3-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista.webp'} 
         imgAlt={'Escritório de advocacia de direito previdenciário e direito do trabalho localizado no centro de Curitiba. Balcão da recepção branco com a logo do escritório ao fundo em uma parede de mármore.'} 
         buttonText={'Quero ser atendido'} 
         buttonLink={'/'}        
@@ -287,7 +287,7 @@ return (
               altImg: 'Sala de reuniões sofisticada com ar-condicionado, mesa de madeira, com 12 lugares e paredes forradas com painéis de madeira, localizado em Curitiba - Paraná.'
             },
             {
-              img: '/assets/images/home/2-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista.webp',
+              img: '/assets/images/home/3-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista.webp',
               altImg: 'Recepção do escritório Glomb Advogados, advocacia especializada em direito do trabalho e previdência social. Entrada com piso de mármore, balcão branco e cadeiras de couro modernas.'
             },
             {
