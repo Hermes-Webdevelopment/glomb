@@ -397,6 +397,7 @@ return (
           title='Blog e notícias'
           btnText='Acessar Blog'
           btnLink='/'
+          blogWPApi='https://blog.glomb.com.br/wp-json/wp/v2/posts'
           blogPosts={[
             {
               img:'/assets/images/home/1-escritorio-advocacia-especializado-INSS-direito-trabalhista-previdenciario-melhor-do-brasil.webp',

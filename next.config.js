@@ -4,6 +4,19 @@ const withPurgeCss = require('next-purgecss')
 
 module.exports = withCss(withPurgeCss())
 
+module.exports = {
+  async rewrites() {
+    return {
+      fallback: [
+        {
+          source: "/blog/:path*",
+          destination: `https://blog.glomb.com.br/:path*`,
+        },
+      ],
+    }
+  },
+}
+
 const nextConfig = {
     reactStrictMode: true,
     trailingSlash: true,
@@ -19,17 +32,4 @@ const nextConfig = {
   }
   
   module.exports = nextConfig
-
-  module.exports = {
-    async rewrites() {
-      return {
-        fallback: [
-          {
-            source: "/blog/:path*",
-            destination: `https://blog.glomb.com.br/:path*`,
-          },
-        ],
-      }
-    },
-  }
   
