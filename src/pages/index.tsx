@@ -414,8 +414,7 @@ return (
               hasLogos: true
             },
             {
-              text: <>Somos signatários do Pacto Global das Nações Unidas e alinhamos nossas operações de acordo com os 10 princípios universais nas áreas de Direitos Humanos, Trabalho, Meio Ambiente e Combate à Corrupção. <br /> 
-                      Fazemos parte desse pacto que é a maior iniciativa de sustentabilidade corporativa do mundo e contribuímos desenvolvendo ações para o enfrentamento dos desafios que a nossa sociedade enfrenta.</>,
+              text: <>Somos signatários do Pacto Global das Nações Unidas e alinhamos nossas operações de acordo com os 10 princípios universais nas áreas de Direitos Humanos, Trabalho, Meio Ambiente e Combate à Corrupção.</>,
               hasLogos: false
             },
             {
