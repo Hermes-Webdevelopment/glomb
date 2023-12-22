@@ -16,13 +16,17 @@ const nextConfig = {
   
       return config
     },
+    async rewrites() {
+      return {
+        fallback: [
+          {
+            source: "/blog/:path*",
+            destination: `https://blog.glomb.com.br/:path*`,
+          },
+        ],
+      }
+    },
   }
   
   module.exports = nextConfig
-
-  // const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  //   enabled: process.env.ANALYZE === 'true',
-  // })
-
-  // module.exports = withBundleAnalyzer({})
   

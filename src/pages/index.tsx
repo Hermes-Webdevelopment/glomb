@@ -7,12 +7,15 @@ import Map from '../components/map'
 import { useEffect, useState } from 'react'
 import { gtmCaller } from '../components/scriptCaller/gtmScript'
 import { clarityCaller } from '../components/scriptCaller/clarityScript'
-import PeopleSlider from '../components/PeopleSlider'
-import BlogSlider from '../components/galeries/blogSlider'
-import SimpleFooter from '../components/footerFormats/simpleFooter'
 import BlueButton from '../components/atons/blueButton'
-import ImageSlider from '../components/galeries/imageSlider'
-import ClientsCommentsSlider from '../components/comentsSlider'
+import dynamic from 'next/dynamic';
+import TextSlider from '../components/galeries/textSlider'
+
+const BlogSlider = dynamic(() =>  import('../components/galeries/blogSlider'));
+const ImageSlider = dynamic(() =>  import('../components/galeries/imageSlider'));
+const ClientsCommentsSlider = dynamic(() =>  import('../components/comentsSlider'));
+const PeopleSlider = dynamic(() =>  import('../components/PeopleSlider'));
+const SimpleFooter = dynamic(() =>  import('../components/footerFormats/simpleFooter'));
 
 const Home: NextPage = () => {
   const [shown, setShown] = useState(false);
@@ -30,7 +33,7 @@ const Home: NextPage = () => {
     };
   }, []);
   
-  const linkWhatsAp = 'https://wa.me/554132239132?text=Olá!+Gostaria+de+analisar+meu+caso+sem+compromisso+-+loas-bpc'
+  const linkWhatsAp = 'https://wa.me/554132239132?text=Olá!+Gostaria+de+analisar+meu+caso+sem+compromisso'
 
   useEffect(() => {
     window.addEventListener('load', gtmCaller)
@@ -80,25 +83,25 @@ return (
             Por isso, somos <strong>referência em serviços jurídicos.</strong></p>
             <p> Atendemos em todo o <strong>Brasil.</strong></p>
           </>} 
-        img={'/assets/images/home/1-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista.webp'} 
-        imgMobile={'/assets/images/home/1-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista.webp'} 
+        img={'/assets/images/home/3-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista.webp'} 
+        imgMobile={'/assets/images/home/3-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista-mobile.webp'} 
         imgAlt={'Escritório de advocacia de direito previdenciário e direito do trabalho localizado no centro de Curitiba. Balcão da recepção branco com a logo do escritório ao fundo em uma parede de mármore.'} 
         buttonText={'Quero ser atendido'} 
-        buttonLink={'/'}        
+        buttonLink={linkWhatsAp}      
       />
       
       <OurServices 
         title1={'Nossos Serviços'}
-        link1={'/'}
+        link1={linkWhatsAp}
         text1={<>
           Somos um <strong>escritório de advocacia</strong> focado na <strong>excelência</strong> desde o atendimento à técnica jurídica.<br />
           Nossa <strong>missão</strong> é proporcionar a <strong>melhor experiência</strong> na prestação de serviços, buscando <strong>soluções ágeis</strong> e <strong>eficientes</strong> para <strong>defender</strong> seus direitos.
         </>}
         title2={'Direito do Trabalho'}
-        link2={'/'}
+        link2={linkWhatsAp}
         text2={<>Atuamos de forma ampla na <strong>defesa</strong> dos seus <strong>direitos trabalhistas</strong>, focados em promover <strong>justiça e equilíbrio</strong> nas relações de trabalho.</>}
         title3={'Direito Previdenciário'}
-        link3={'/'}
+        link3={linkWhatsAp}
         text3={<>Defendemos seu <strong>direito</strong> aos benefícios da <strong>Previdência Social</strong>. Conte com nossa experiência para <strong>conquistar</strong> uma vida mais estável e segura.</>} 
         bgimg1={'/assets/images/home/glomb_recepcao_entrada.webp'} 
         bgimg2={'/assets/images/home/melhor-advogado-direto-trabalhista-do-brasil.webp'} 
@@ -187,7 +190,7 @@ return (
             
             {
               imageUrl: '/assets/images/advogados/regiani-aparecida-correia-advogada-previdencia-social.webp',
-              imageTitle: 'Regiane Aparecida Correia',
+              imageTitle: 'Regiane Correia',
               imageAlt: 'Regiani Aparecida Correia, OAB/PR 89.032, advogada especialista em direito previdenciário.',
               imageSubTitle: 'Advogado',
               text: 'OAB/PR 89.032'
@@ -285,7 +288,7 @@ return (
               altImg: 'Sala de reuniões sofisticada com ar-condicionado, mesa de madeira, com 12 lugares e paredes forradas com painéis de madeira, localizado em Curitiba - Paraná.'
             },
             {
-              img: '/assets/images/home/1-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista.webp',
+              img: '/assets/images/home/3-melhor-escritorio-advocacia-brasil-direito-previdenciario-trabalhista.webp',
               altImg: 'Recepção do escritório Glomb Advogados, advocacia especializada em direito do trabalho e previdência social. Entrada com piso de mármore, balcão branco e cadeiras de couro modernas.'
             },
             {
@@ -396,43 +399,31 @@ return (
         <BlogSlider 
           title='Blog e notícias'
           btnText='Acessar Blog'
-          btnLink='/'
-          blogPosts={[
-            {
-              img:'/assets/images/home/office.jpg',
-              imgaAlt:'teste',
-              postTitle:'Revisão da Vida Toda pode aumentar 5x sua Aposentadoria',
-              postText: 'A Revisão da Vida Toda pode aumentar em até 5x o valor de sua Aposentadoria ou Pensão. Descubra como.',
-              actionBtn:'Ver mais'
-            },{
-              img:'/assets/images/home/office.jpg',
-              imgaAlt:'teste',
-              postTitle:'Guia Completo do Auxílio-Acidente',
-              postText: 'Auxílio-acidente: O que é? quem tem direito? qual o valor? como conseguir? qual a duração? como funciona o auxílio-acidente.',
-              actionBtn:'Ver mais'
-            },{
-              img:'/assets/images/home/office.jpg',
-              imgaAlt:'teste',
-              postTitle:'Tudo sobre Benefício Assistencial (LOAS)',
-              postText: 'Nesse artigo explicamos o que é, quem tem direito e como funciona o Benefício Assistencial ou BPC (Benefício de Prestação Continuada) - LOAS.',
-              actionBtn:'Ver mais'
-            },{
-              img:'/assets/images/home/office.jpg',
-              imgaAlt:'teste',
-              postTitle:'Mercado de trabalho no Brasil hoje vive à margem da CLT',
-              postText: 'O mercado de trabalho, hoje, vive à margem da CLT. Segundo o IBGE, das 100 milhões de pessoas ocupadas hoje, 39 milhões estão na informalidade.',
-              actionBtn:'Ver mais'
-            },{
-              img:'/assets/images/home/office.jpg',
-              imgaAlt:'teste',
-              postTitle:'Nova lista de doenças do trabalho inclui covid-19, burnout e vários tipos de câncer.',
-              postText: 'O Ministério da Saúde divulgou na quarta-feira (29) atualização da lista de doenças relacionadas ao trabalho. A lista inclui COVID, burnout e outras.',
-              actionBtn:'Ver mais'
-            }
-          ]}
+          btnLink={'/blog'}
+          blogWPApi='https://blog.glomb.com.br/wp-json/wp/v2/posts'
         />
 
         <Map />
+
+        <TextSlider 
+          title={'Iniciativas que apoiamos'} 
+          subText={'O Glomb & Advogados Associados tem o compromisso permanente de contribuir para um país melhor.'} 
+          textArray={[
+            {
+              text: 'Nossa atuação está fortemente relacionada à erradicação da pobreza, fome zero, promoção da igualdade de gênero, luta por condições de trabalho decentes e crescimento econômico, redução das desigualdades e acesso à justiça.',
+              hasLogos: true
+            },
+            {
+              text: <>Somos signatários do Pacto Global das Nações Unidas e alinhamos nossas operações de acordo com os 10 princípios universais nas áreas de Direitos Humanos, Trabalho, Meio Ambiente e Combate à Corrupção.</>,
+              hasLogos: false
+            },
+            {
+              text: <>Além disso, apoiamos o Hospital Pequeno Príncipe, uma instituição filantrópica sem fins lucrativos que destina 70% de sua capacidade para pacientes atendidos pelo Sistema Único de Saúde - SUS. <br /> 
+                      É uma grande satisfação contribuir para que esse hospital pediátrico possa continuar beneficiando milhares de crianças e adolescentes ano após ano.</>,
+              hasLogos: false
+            },
+          ]}        
+        />
 
         <SimpleFooter 
           logo='glomb'

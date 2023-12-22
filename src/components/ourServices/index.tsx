@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import styles from './styles.module.scss';
-import Link from 'next/link';
 
 interface OurServicesInterface {
     title1: string 

@@ -27,9 +27,7 @@ export default function ImageSlider(props: ImageSliderInterface) {
                 <Swiper
                     spaceBetween={50}
                     slidesPerView={1}
-                    autoplay={{ delay: 2000 }}
                     loop
-                    navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}
                     className={styles.swiperContainer}
                 >
                     <SwiperButtons />

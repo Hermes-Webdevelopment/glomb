@@ -47,6 +47,7 @@
         > p {
             font: $montserrat-18;
             margin-bottom: 16px;
+            text-align: justify;
         }
 
         > p:first-of-type {
@@ -67,7 +68,9 @@
     .wordsContainer {
         align-items: flex-start;
         .textContainer {
-            max-width: 375px;
+            h1 {
+                max-width: 375px;
+            }
         }
     }
 }
@@ -76,7 +79,9 @@
     
     .wordsContainer {
         .textContainer {
-            max-width: 241px;
+            h1 {
+                max-width: 241px;
+            }
         }
     }
 }

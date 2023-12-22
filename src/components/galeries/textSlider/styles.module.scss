@@ -1,0 +1,115 @@
+@import '/src/styles/variables.scss';
+
+.imagesliderSection {
+    min-height: 100vh;
+}
+
+.sliderButtons {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 16px;
+    gap: 8px;
+
+    button {
+        background-color: transparent;
+    }
+    
+    svg {
+        max-height: 41px;
+    }
+}
+
+.textSliderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    z-index: 9;
+    padding-top: 24px;
+    padding-bottom: 56px;
+
+    > h2 {
+        display: flex;
+        font: $montserrat-36;
+        text-align: center;
+    }
+
+    >h3 {
+        max-width: 100%;
+        font: $montserrat-20;
+        margin-bottom: 33px;
+        margin-top: 16px;
+
+    }
+
+    >div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    .logosContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        max-height: 65px;
+        position: relative;
+        padding-right: 10px;
+
+        img{
+            max-height: 100%;
+            max-width: 100%;
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    .postContainer {
+        width: 98%;
+        height: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        min-height: 250px;
+
+        p {
+            text-align: start;
+            font: $montserrat-20;
+            text-align: justify;
+        }
+    }
+    
+}
+
+@media (min-width: 550px) {
+
+}
+
+@media (min-width: 768px) {
+    .textSliderContainer {
+        padding-top: 0px;
+
+        > h3 {
+            max-width: 38%;;
+        }
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .sliderButtons {
+        display: none;
+    }
+    
+}

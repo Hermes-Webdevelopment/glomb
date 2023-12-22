@@ -37,7 +37,7 @@
     width: 100vw;
     overflow: hidden;
     position: relative;
-    padding-left: 88px;
+    padding-left: 28px;
 
     p {
         font: $montserrat-18;
@@ -45,29 +45,21 @@
     }
     
     .slidesDiv {
-        display: flex;
-        flex-flow: row nowrap;
-        padding: 2px 0;
-        width: 100%;
+        border-radius: 16px;
+        background-color: white;
+        -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.1);
+        box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.1);
+        margin: 3px 0;
         
         .slideContainer {
-            min-width: 23%;
-            max-width: 23%;
-            margin-right: 56px;
-            width: 100%;
             line-height: 28px;
             position: relative;
             height: 340px;
-            min-width: 375px;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             flex-direction: column;
-            border-radius: 16px;
-            background-color: white;
-            -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.1);
-            -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.1);
-            box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.1);
             padding: 24px 28px;
 
             .letterBox {
@@ -87,21 +79,19 @@
                 font: $montserrat-18;
                 color: black;
                 line-height: 28px;
+                text-align: start;
             }
 
             > div {
                 max-width: 100%;
+                width: 100%;
                 white-space: initial;
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
                 min-height: 60px;
             }
         }
-    }
-
-    .slidesDiv::-webkit-scrollbar{
-        display: none;
     }
 }
 
@@ -112,8 +102,6 @@
 .changeToTouchMode {
     padding-left: unset !important;
     .slidesDiv {
-        width: auto;
-        overflow-x: scroll;
         
         img {
             max-height: 100%;
@@ -126,28 +114,14 @@
     }
 }
 
-@media (max-width:1200px) {
-    .sliderContainer {
-        
-        .slidesDiv {
-            overflow-x: scroll;
-            
-            .slideContainer {
-                min-width: 30%;
-                max-width: 30%;
-            }
-        }
-    }
-}
-
 @media (max-width: 992px) {
     .sliderContainer {
         
         .slidesDiv {
             
             .slideContainer {
-                min-width: 50%;
-                max-width: 50%;
+                min-width: 100%;
+                max-width: 100%;
                 margin-right: 24px;
             }
         }
@@ -200,16 +174,6 @@
 }
 
 @media (max-width: 576px) {
-    .sliderContainer {
-        
-        .slidesDiv {
-            
-            .slideContainer {
-                min-width: 300px;
-                max-width: 300px;
-            }
-        }
-    }
 
     .changeToTouchMode {
         
