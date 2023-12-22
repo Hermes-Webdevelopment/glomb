@@ -101,6 +101,10 @@
             object-fit: cover;
         }
 
+        p {
+            text-align: justify;
+        }
+
         .saibaMais {
             font: $montserrat-16-semibold;
             color: $branding-primary;
@@ -142,7 +146,7 @@
             100% {
               transform: rotate(360deg);
             }
-          }
+        }
           
     }
     
@@ -172,5 +176,4 @@
     .sliderButtons {
         display: none;
     }
-    
 }

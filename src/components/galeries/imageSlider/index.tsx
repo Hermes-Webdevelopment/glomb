@@ -5,7 +5,6 @@ import { getScreenSiteAndWidth } from '../../../helpers/screenSize';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import React from 'react';
 import SwiperButtons from './swiperButtons';
-import { Autoplay } from 'swiper/modules';
 
 interface ImageSliderInterface {
     title: string | ReactNode,
@@ -28,11 +27,6 @@ export default function ImageSlider(props: ImageSliderInterface) {
                 <Swiper
                     spaceBetween={50}
                     slidesPerView={1}
-                    autoplay={{
-                      delay: 2500,
-                      disableOnInteraction: true,
-                    }}
-                    modules={[Autoplay]}
                     loop
                     className={styles.swiperContainer}
                 >
