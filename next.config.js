@@ -21,7 +21,7 @@ const nextConfig = {
         fallback: [
           {
             source: "/blog/:path*",
-            destination: `https://beta.glomb.com.br/:path*`,
+            destination: `https://blog.glomb.com.br/:path*`,
           },
         ],
       }
