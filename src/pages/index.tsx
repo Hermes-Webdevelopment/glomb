@@ -10,6 +10,7 @@ import { clarityCaller } from '../components/scriptCaller/clarityScript'
 import BlueButton from '../components/atons/blueButton'
 import dynamic from 'next/dynamic';
 import TextSlider from '../components/galeries/textSlider'
+import WhatsBtn from '../components/floatingWhats'
 
 const BlogSlider = dynamic(() =>  import('../components/galeries/blogSlider'));
 const ImageSlider = dynamic(() =>  import('../components/galeries/imageSlider'));
@@ -61,7 +62,7 @@ return (
       <meta property='og:url' content='https://previdenciario.glomb.com.br/'/>
       <meta property='og:type' content='website'/>
 
-      <title>Glomb Advocacia - especialista em aposentadorias</title>
+      <title>Glomb Advogados | Referência em Serviços Jurídicos</title>
       <meta name="keywords" content="advocacia, previdenciario"></meta>
       <meta name="description" content="Advocacia Glomb"></meta>
     </Head>
@@ -72,6 +73,11 @@ return (
             buttonLink={linkWhatsAp}
             buttonText={<><strong>Quero ser atendido</strong></>}
           />
+      </div>
+
+      <div className='apearMobile'>
+        <WhatsBtn link={linkWhatsAp}          
+        />
       </div>
 
       <WordsBanner 

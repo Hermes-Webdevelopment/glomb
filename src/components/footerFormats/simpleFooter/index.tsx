@@ -28,7 +28,9 @@ export default function SimpleFooter(props: simpleFooterInterface) {
     return (
 
         <section id='footerContainer' className={styles.footerSection}>
-            <div className={callToAction ? styles.extraAction : styles.removeExtra}>
+            {
+                callToAction &&
+                <div className={styles.extraAction}>
                 <div className={`container ${styles.extraActiontxt}`}>
                     <h2>{callTitle}</h2>
                     <h3>{callText}</h3>
@@ -39,6 +41,7 @@ export default function SimpleFooter(props: simpleFooterInterface) {
                 </div>
 
             </div>
+            }
             <div className={`container ${styles.simpleFooterContainer}`}>
                 <div className={styles.firstLine}>
                     {
