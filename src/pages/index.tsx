@@ -37,8 +37,10 @@ const Home: NextPage = () => {
   const linkWhatsAp = 'https://wa.me/554132239132?text=Olá!+Gostaria+de+analisar+meu+caso+sem+compromisso'
 
   useEffect(() => {
-    window.addEventListener('load', gtmCaller)
-    window.addEventListener('load', clarityCaller)
+    setTimeout(() => {
+      window.addEventListener('load', gtmCaller)
+      window.addEventListener('load', clarityCaller)
+    },200)
   },[])
   
 return (
